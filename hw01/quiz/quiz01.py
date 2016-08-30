@@ -1,9 +1,9 @@
 def multiple(a, b):
     """Return the smallest number n that is a multiple of both a and b.
 
-    #>>> multiple(3, 4)
+    >>> multiple(3, 4)
     12
-    #>>> multiple(14, 21)
+    >>> multiple(14, 21)
     42
     """
     "*** YOUR CODE HERE ***"
@@ -38,26 +38,25 @@ def unique_digits(n):
     2
     >>> unique_digits(101) # 0 and 1
     2
-    >>> unique_digits(20) # 0 and 1
+    >>> unique_digits(10) # 0 and 1
     2
     """
+    "*** YOUR CODE HERE ***"
     uniques = []
     divisor = 1
-    while divisor * 10 < n:
+    while not divisor * 10 > n:
         divisor *= 10
-    while divisor > 1:
-        temp = int(n // divisor)
-        n -= divisor * temp
+    while divisor >= 1:
+        digit = int(n // divisor)
+        n -= divisor * digit
         exists = False
         for unique in uniques:
-            if unique == temp:
+            if unique == digit:
                 exists = True
         if not exists:
-            uniques.append(temp)
-        divisor /= 10
+            uniques.append(digit)
+        divisor //= 10
     return len(uniques)
 
-
-#TODO zeros dont work bc of division if it is only the last digit
 
 
