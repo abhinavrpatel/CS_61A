@@ -12,7 +12,7 @@ def a_plus_abs_b(a, b):
     if b < 0:
         f = lambda x, y: sub(x, y)
     else:
-        f = lambda a, b: add(a,b)
+        f = lambda x, y: add(x, y)
     return f(a, b)
 
 
@@ -31,7 +31,7 @@ def two_of_three(a, b, c):
     >>> two_of_three(5, 5, 5)
     50
     """
-    return sub(add(a*a, b*b, c*c), min(a,b,c))
+    return a*a + b*b + c*c - min(a,b,c)**2
 
 
 
@@ -53,7 +53,7 @@ def largest_factor(n):
     if n <= 1:
         return 1
 
-    i = n - 1;
+    i = n - 1
     found = False
     while not found:
         if n % i == 0 or i == 1:
@@ -101,13 +101,15 @@ def with_if_statement(): #THIS ONE MUST RETURN THE NUMBER ONE
     if c():
         return t()
     else:
-        return f()
+        return f() #f() is not executed
 
 
 
 
 
 def with_if_function():
+    # Python will execute c(), t(), f() and pass the results
+    # into if_function
     return if_function(c(), t(), f())
 
 
@@ -115,7 +117,7 @@ def with_if_function():
 
 def c():
     "*** YOUR CODE HERE ***"
-    return 1
+    return True
 
 
 def t():
@@ -124,7 +126,8 @@ def t():
 
 def f():
     "*** YOUR CODE HERE ***"
-    print('hello darkness my old friend')
+    print('hello darkness my old friend\n\n')
+    print('f() is being executed right now and printing this line\n\n')
     return 0
 
 def hailstone(n):
