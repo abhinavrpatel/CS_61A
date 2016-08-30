@@ -134,7 +134,7 @@ def hailstone(n):
     """Print the hailstone sequence starting at n and return its
     length.
 
-    #>>> a = hailstone(10)
+    >>> a = hailstone(10)
     10
     5
     16
@@ -142,16 +142,21 @@ def hailstone(n):
     4
     2
     1
-    #>>> a
+    >>> a
     7
     """
     "*** YOUR CODE HERE ***"
     steps = 0
-    while n != 1:
+    while True:
+        print(n)
+        steps += 1 #one step = one iteration of the loop
+        if n == 1:
+            break #the only desired exit condition
         if n % 2 == 0:
-            n /= 2
+            n //= 2
         else:
             n = 3 * n + 1
-        print (n + '\n')
-        steps += 1
+
+
+
     return steps

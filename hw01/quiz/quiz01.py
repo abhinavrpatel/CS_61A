@@ -38,28 +38,26 @@ def unique_digits(n):
     2
     >>> unique_digits(101) # 0 and 1
     2
-    >>> unique_digits(10) # 0 and 1
+    >>> unique_digits(20) # 0 and 1
     2
     """
-    "*** YOUR CODE HERE ***"
     uniques = []
-    num_uniques = 0
     divisor = 1
-    while divisor < n:
+    while divisor * 10 < n:
         divisor *= 10
-
-    while divisor >= 1:
-        temp = n / divisor
+    while divisor > 1:
+        temp = int(n // divisor)
+        n -= divisor * temp
         exists = False
-        for iter in uniques:
-            if iter == temp:
+        for unique in uniques:
+            if unique == temp:
                 exists = True
         if not exists:
-            num_uniques += 1
             uniques.append(temp)
-
+        divisor /= 10
     return len(uniques)
 
 
+#TODO zeros dont work bc of division if it is only the last digit
 
 
