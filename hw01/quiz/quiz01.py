@@ -42,6 +42,8 @@ def unique_digits(n):
     2
     """
     "*** YOUR CODE HERE ***"
+
+
     uniques = []
     divisor = 1
     while not divisor * 10 > n:
