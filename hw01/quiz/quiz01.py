@@ -47,7 +47,7 @@ def unique_digits(n):
     while not divisor * 10 > n:
         divisor *= 10
     while divisor >= 1:
-        digit = int(n // divisor)
+        digit = n // divisor
         n -= divisor * digit
         exists = False
         for unique in uniques:
