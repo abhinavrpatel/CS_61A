@@ -27,6 +27,11 @@ def repeated(f, n, x):
     True
     """
     "*** YOUR CODE HERE ***"
+    result = x
+    while n > 0:
+        result = f(result)
+        n -= 1
+    return result
 
 def sum_digits(n):
     """Sum all the digits of n.
