@@ -18,9 +18,29 @@ def roll_dice(num_rolls, dice=six_sided):
     # These assert statements ensure that num_rolls is a positive integer.
     assert type(num_rolls) == int, 'num_rolls must be an integer.'
     assert num_rolls > 0, 'Must roll at least once.'
+
     # BEGIN PROBLEM 1
-    "*** REPLACE THIS LINE ***"
+    score = 0
+    found_one = False
+    while num_rolls > 0:
+        roll = dice()
+        #print("roll:\t", roll, "\tnumrolls:\t", num_rolls)
+        num_rolls -= 1
+        if roll == 1 and found_one:
+            score += 1
+        elif roll == 1 and not found_one:
+            found_one = True
+            score = 1
+        elif not found_one:
+            score += roll
+    return score
     # END PROBLEM 1
+
+
+
+
+
+
 
 
 def free_bacon(opponent_score):
