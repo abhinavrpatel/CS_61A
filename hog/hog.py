@@ -58,8 +58,16 @@ def free_bacon(opponent_score):
 # Write your prime functions here!
 
 
-def check_prime(num):
-    return False #TODO implement
+def check_prime(score):
+    if score == 1:
+        return False
+
+    div = 2
+    while div < score:
+        if score % div == 0:
+            return False
+        div += 1
+    return True
 
 
 
