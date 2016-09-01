@@ -58,6 +58,23 @@ def free_bacon(opponent_score):
 # Write your prime functions here!
 
 
+def check_prime(num):
+    return False #TODO implement
+
+
+
+def next_prime(num):
+    num += 1
+    while True:
+        if check_prime(num):
+            return num
+        num += 1
+
+
+
+
+
+
 def take_turn(num_rolls, opponent_score, dice=six_sided):
     """Simulate a turn rolling NUM_ROLLS dice, which may be 0 (Free Bacon).
     Return the points scored for the turn by the current player. Also
@@ -79,10 +96,8 @@ def take_turn(num_rolls, opponent_score, dice=six_sided):
         score = roll_dice(num_rolls, dice)
         max_possible = 25 - num_rolls
 
-        is_prime = False
-        # TODO implement checker to see if score is prime
-        if is_prime:
-            score = score #TODO replace this so it is set to next largest prime number
+        if check_prime(score): #Hogtimus Prime
+            score = next_prime(score)
 
         if score > max_possible:
             return max_possible  # When Pigs Fly
