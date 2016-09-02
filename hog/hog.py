@@ -46,12 +46,7 @@ def roll_dice(num_rolls, dice=six_sided):
 def free_bacon(opponent_score):
     """Return the points scored from rolling 0 dice (Free Bacon)."""
     # BEGIN PROBLEM 2
-    largest_digit = 0
-    while opponent_score > 0:
-        if largest_digit < opponent_score % 10:
-            largest_digit = opponent_score % 10
-        opponent_score //= 10
-    return 1 + largest_digit
+    return 1 + max(opponent_score % 10, opponent_score // 10)
     # END PROBLEM 2
 
 
@@ -99,17 +94,16 @@ def take_turn(num_rolls, opponent_score, dice=six_sided):
     assert opponent_score < 100, 'The game should be over.'
     # BEGIN PROBLEM 2
     if num_rolls == 0:
-        return free_bacon(opponent_score)
+        score = free_bacon(opponent_score)
     else:
         score = roll_dice(num_rolls, dice)
-        max_possible = 25 - num_rolls
 
-        if check_prime(score): #Hogtimus Prime
+    if check_prime(score): #Hogtimus Prime
             score = next_prime(score)
 
-        if score > max_possible:
-            return max_possible  # When Pigs Fly
-        return score
+    if score > 25 - num_rolls:
+        return 25 - num_rolls  # When Pigs Fly
+    return score
 
     # END PROBLEM 2
 
