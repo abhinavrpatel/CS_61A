@@ -42,7 +42,6 @@ def roll_dice(num_rolls, dice=six_sided):
 
 
 
-
 def free_bacon(opponent_score):
     """Return the points scored from rolling 0 dice (Free Bacon)."""
     # BEGIN PROBLEM 2
@@ -50,19 +49,19 @@ def free_bacon(opponent_score):
     # END PROBLEM 2
 
 
+
+
 # Write your prime functions here!
-
-
 def check_prime(score):
     if score == 1:
         return False
-
     div = 2
     while div < score:
         if score % div == 0:
             return False
         div += 1
     return True
+
 
 
 
@@ -111,10 +110,6 @@ def take_turn(num_rolls, opponent_score, dice=six_sided):
 
 
 
-
-
-
-
 def reroll(dice):
     """Return dice that return even outcomes and re-roll odd outcomes of DICE."""
     def rerolled():
@@ -127,6 +122,10 @@ def reroll(dice):
     return rerolled
 
 
+
+
+
+
 def select_dice(score, opponent_score, dice_swapped):
     """Return the dice used for a turn, which may be re-rolled (Hog Wild) and/or
     swapped for four-sided dice (Pork Chop).
@@ -134,8 +133,11 @@ def select_dice(score, opponent_score, dice_swapped):
     DICE_SWAPPED is True if and only if four-sided dice are being used.
     """
     # BEGIN PROBLEM 4
-    "*** REPLACE THIS LINE ***"
-    dice = six_sided  # Replace this statement
+    if not dice_swapped:
+        dice = six_sided
+    else:
+        dice = four_sided
+
     # END PROBLEM 4
     if (score + opponent_score) % 7 == 0:
         dice = reroll(dice)
