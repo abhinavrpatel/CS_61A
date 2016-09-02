@@ -171,7 +171,27 @@ def play(strategy0, strategy1, score0=0, score1=0, goal=GOAL_SCORE):
     player = 0  # Which player is about to take a turn, 0 (first) or 1 (second)
     dice_swapped = False  # Whether 4-sided dice have been swapped for 6-sided
     # BEGIN PROBLEM 5
-    "*** REPLACE THIS LINE ***"
+    while score0 < goal and score1 < goal:
+        if player == 0:
+            num_rolls = strategy0(score0, score1)
+            if num_rolls == -1:
+                dice_swapped = not dice_swapped
+                score0 += 1
+            else:
+                dice = select_dice(score0, score1, dice_swapped)
+                score0 += take_turn(num_rolls, score1, dice)
+        else:
+            num_rolls = strategy1(score1, score0)
+            if num_rolls == -1:
+                dice_swapped = not dice_swapped
+                score1 += 1
+            else:
+                dice = select_dice(score1, score0, dice_swapped)
+                score1 += take_turn(num_rolls, score0, dice)
+        if score0 * 2 == score1 or score1 * 2 == score0: #swine swap
+            score0, score1 = score1, score0
+        player = other(player)
+
     # END PROBLEM 5
     return score0, score1
 
