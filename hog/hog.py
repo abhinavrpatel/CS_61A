@@ -24,7 +24,6 @@ def roll_dice(num_rolls, dice=six_sided):
     found_one = False
     while num_rolls > 0:
         roll = dice()
-        #print("roll:\t", roll, "\tnumrolls:\t", num_rolls)
         num_rolls -= 1
         if roll == 1 and found_one:
             score += 1
@@ -291,7 +290,14 @@ def make_averaged(fn, num_samples=1000):
     3.75
     """
     # BEGIN PROBLEM 7
-    "*** REPLACE THIS LINE ***"
+    def foo(*args):
+        total, i = 0, num_samples
+        while i > 0:
+            total += fn(*args)
+            i -= 1
+        return total / num_samples
+
+    return foo
     # END PROBLEM 7
 
 
