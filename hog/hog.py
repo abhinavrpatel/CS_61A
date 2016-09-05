@@ -411,8 +411,31 @@ def final_strategy(score, opponent_score):
     *** YOUR DESCRIPTION HERE ***
     """
     # BEGIN PROBLEM 11
-    "*** REPLACE THIS LINE ***"
-    return 4  # Replace this statement
+    margin = 8
+    num_rolls = 4
+
+    dist = GOAL_SCORE - score
+
+    bacon_score = free_bacon(opponent_score)
+
+    if check_prime(bacon_score):
+        bacon_score = next_prime(bacon_score)
+
+    if bacon_score >= margin or bacon_score >= dist:
+        if score+bacon_score==opponent_score/2 or score+bacon_score==opponent_score*2:
+            if opponent_score > score: #if swap, it must be beneficial
+
+                return 0
+        else:
+            return 0
+
+    if score * 2 == opponent_score or score/2 == opponent_score:
+        if opponent_score > score:
+            return 0
+
+    if score + opponent_score % 7 == 0:
+        num_rolls = -1
+    return num_rolls
     # END PROBLEM 11
 check_strategy(final_strategy)
 
