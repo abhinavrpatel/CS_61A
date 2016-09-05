@@ -424,7 +424,6 @@ def final_strategy(score, opponent_score):
     if bacon_score >= margin or bacon_score >= dist:
         if score+bacon_score==opponent_score/2 or score+bacon_score==opponent_score*2:
             if opponent_score > score: #if swap, it must be beneficial
-
                 return 0
         else:
             return 0
