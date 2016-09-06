@@ -408,13 +408,17 @@ check_strategy(swap_strategy)
 def final_strategy(score, opponent_score):
     """Write a brief description of your final strategy.
 
-    *** YOUR DESCRIPTION HERE ***
+    This strategy gives the opponent the four sided dice at the beginning
+    of the game. Then, we take advantage of and use free bacon, unless it
+    returns a small number, and in that case we roll 4 dice.
     """
     # BEGIN PROBLEM 11
     if score == 0:
         return -1
-    else:
+    elif free_bacon(opponent_score) > 4:
         return 0
+    else:
+        return 4
     # END PROBLEM 11
 check_strategy(final_strategy)
 
