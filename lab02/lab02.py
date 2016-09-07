@@ -11,7 +11,11 @@ def lambda_curry2(func):
     >>> add_three(5)
     8
     """
-    return lambda func: lambda y: lambda x: func(y, x)
+    def outer(arg1):
+        def inner(arg2):
+            return func(arg1, arg2)
+        return inner
+    return outer
 
 # Higher Order Functions
 
