@@ -34,7 +34,12 @@ def accumulate(combiner, base, n, term):
     >>> accumulate(mul, 2, 3, square)   # 2 * 1^2 * 2^2 * 3^2
     72
     """
-    "*** YOUR CODE HERE ***"
+    if n == 0:
+        return base
+    return combiner(term(n), accumulate(combiner, base, n-1, term))
+
+
+
 
 def summation_using_accumulate(n, term):
     """Returns the sum of term(1) + ... + term(n). The implementation
@@ -49,8 +54,12 @@ def summation_using_accumulate(n, term):
     ...       ['Recursion', 'For', 'While'])
     True
     """
-    "*** YOUR CODE HERE ***"
-    return _______
+    return accumulate(add, 0, n, term)
+
+
+
+
+
 
 def product_using_accumulate(n, term):
     """An implementation of product using accumulate.
@@ -64,8 +73,11 @@ def product_using_accumulate(n, term):
     ...       ['Recursion', 'For', 'While'])
     True
     """
-    "*** YOUR CODE HERE ***"
-    return _______
+    return accumulate(mul, 1, n, term)
+
+
+
+
 
 def filtered_accumulate(combiner, base, pred, n, term):
     """Return the result of combining the terms in a sequence of N terms
@@ -94,11 +106,18 @@ def filtered_accumulate(combiner, base, pred, n, term):
         "*** YOUR CODE HERE ***"
     return accumulate(combine_if, base, n, term)
 
+
+
 def odd(x):
     return x % 2 == 1
 
+
+
+
 def greater_than_5(x):
     return x > 5
+
+
 
 def repeated(f, n):
     """Return the function that computes the nth application of f.
