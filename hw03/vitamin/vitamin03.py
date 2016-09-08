@@ -16,7 +16,11 @@ def has_seven(k):
     >>> has_seven(7777)
     True
     """
-    "*** YOUR CODE HERE ***"
+    if k % 10 == 7:
+        return True
+    if k < 10:
+        return False
+    return has_seven(k//10)
 
 def summation(n, term):
 
@@ -36,4 +40,6 @@ def summation(n, term):
     True
     """
     assert n >= 1
-    "*** YOUR CODE HERE ***"
+    if n == 1:
+        return term(n)
+    return term(n) + summation(n-1, term)
