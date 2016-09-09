@@ -135,7 +135,7 @@ def repeated(f, n):
     5
     """
     "*** YOUR CODE HERE ***"
-    #ofsdafasdf TODO delete this line
+
 
 def compose1(f, g):
     """Return a function h, such that h(x) = f(g(x))."""
