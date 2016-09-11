@@ -136,7 +136,14 @@ def repeated(f, n):
     >>> repeated(square, 0)(5)
     5
     """
-    "*** YOUR CODE HERE ***"
+    def computer(val):
+        iters = n
+        while iters > 0:
+            val = f(val)
+            iters -= 1
+        return val
+    return computer
+
 
 
 def compose1(f, g):
