@@ -22,6 +22,7 @@ def gcd(a, b):
     else:
         return gcd(a, b % a)
 
+
 def hailstone(n):
     """Print out the hailstone sequence starting at n, and return the
     number of elements in the sequence.
@@ -37,4 +38,8 @@ def hailstone(n):
     >>> a
     7
     """
-    "*** YOUR CODE HERE ***"
+    print(n)
+    if n == 1:
+        return 1
+    n = n//2 if n % 2 == 0 else 3*n + 1
+    return 1 + hailstone(n)
