@@ -83,6 +83,7 @@ def pingpong(n):
             return reverse(k + 1, prev + 1, inc)
         else:
             return reverse(k + 1, prev - 1, inc)
+
     def reverse(k, prev, inc):
         if k % 7 == 0 or has_seven(k):
             return next(k, prev, not inc)
@@ -128,7 +129,16 @@ def count_change(amount):
     >>> count_change(100)
     9828
     """
-    "*** YOUR CODE HERE ***"
+    def compute(coin, amount):
+        if amount == 0:
+            return 1
+        if amount < 0 or coin > amount:
+            return 0
+        return compute(coin * 2, amount) + \
+               compute(coin, amount - coin)
+
+
+    return compute(1, amount) #get using one coin and work up
 
 ###################
 # Extra Questions #
