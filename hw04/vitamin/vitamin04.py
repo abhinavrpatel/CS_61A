@@ -33,4 +33,10 @@ def squares(s):
     >>> squares(seq)
     []
     """
-    "*** YOUR CODE HERE ***"
+    result = []
+    for i in s:
+        root = (int)(pow(i, 1/2))
+        if root * root == i:
+            result.append(root)
+    return result
+
