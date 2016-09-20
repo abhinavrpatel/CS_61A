@@ -76,7 +76,22 @@ def pingpong(n):
     >>> check(HW_SOURCE_FILE, 'pingpong', ['Assign', 'AugAssign'])
     True
     """
-    "*** YOUR CODE HERE ***"
+    def next(k, prev, inc):
+        if k == n:
+            return prev
+        if inc:
+            return reverse(k + 1, prev + 1, inc)
+        else:
+            return reverse(k + 1, prev - 1, inc)
+    def reverse(k, prev, inc):
+        if k % 7 == 0 or has_seven(k):
+            return next(k, prev, not inc)
+        else:
+            return next(k, prev, inc)
+    return next(1, 1, True)
+
+
+
 
 def has_seven(k):
     """Returns True if at least one of the digits of k is a 7, False otherwise.
