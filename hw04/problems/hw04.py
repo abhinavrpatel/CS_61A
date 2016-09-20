@@ -17,7 +17,9 @@ def g(n):
     >>> check(HW_SOURCE_FILE, 'g', ['While', 'For'])
     True
     """
-    "*** YOUR CODE HERE ***"
+    if n <= 3:
+        return n
+    return g(n-1) + 2*g(n-2) + 3*g(n-3)
 
 def g_iter(n):
     """Return the value of G(n), computed iteratively.
@@ -36,7 +38,12 @@ def g_iter(n):
     >>> check(HW_SOURCE_FILE, 'g_iter', ['Recursion'])
     True
     """
-    "*** YOUR CODE HERE ***"
+    if n <= 3:
+        return n
+    x, y, z = 1, 2, 3
+    for i in range(n - 3):
+        x, y, z = y, z, z + 2 * y + 3 * x
+    return z
 
 def pingpong(n):
     """Return the nth element of the ping-pong sequence.
