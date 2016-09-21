@@ -103,7 +103,12 @@ def closer_city(lat, lon, city1, city2):
     'Bucharest'
     """
     reference = make_city('reference point', lat, lon)
-    #if distance(reference, city)
+    if distance(reference, city1) < distance(reference, city2):
+        return get_name(city1)
+    return get_name(city2)
+
+
+
 
 # Connect N: Q6-11
 ######################
