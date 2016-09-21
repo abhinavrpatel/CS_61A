@@ -18,6 +18,16 @@ def if_this_not_that(i_list, this):
         else:
             print('that')
 
+
+
+
+
+
+
+
+
+
+
 # Q4
 def make_city(name, lat, lon):
     """
@@ -67,7 +77,15 @@ def distance(city1, city2):
     >>> distance(city3, city4)
     5.0
     """
-    "*** YOUR CODE HERE ***"
+    pythongoras = pow(get_lon(city1) - get_lon(city2), 2)
+    pythongoras += pow(get_lat(city1) - get_lat(city2), 2)
+    return sqrt(pythongoras)
+
+
+
+
+
+
 
 # Q5
 def closer_city(lat, lon, city1, city2):
@@ -84,7 +102,8 @@ def closer_city(lat, lon, city1, city2):
     >>> closer_city(41.29, 174.78, bucharest, vienna)
     'Bucharest'
     """
-    "*** YOUR CODE HERE ***"
+    reference = make_city('reference point', lat, lon)
+    #if distance(reference, city)
 
 # Connect N: Q6-11
 ######################
