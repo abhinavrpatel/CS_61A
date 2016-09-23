@@ -123,7 +123,7 @@ def create_row(size):
     ['-', '-', '-', '-', '-']
     """
     "*** YOUR CODE HERE ***"
-    return _______
+    return ['-' for i in range(size) if True]
 
 
 def create_board(rows, columns):
@@ -132,8 +132,8 @@ def create_board(rows, columns):
     >>> create_board(3, 5)
     [['-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-']]
     """
-    "*** YOUR CODE HERE ***"
-    return _______
+    one_row = ['-' for i in range(columns)]
+    return [one_row for i in range(rows)]
 
 
 def replace_elem(lst, index, elem):
@@ -148,8 +148,11 @@ def replace_elem(lst, index, elem):
     False
     """
     assert index >= 0 and index < len(lst), 'Index is out of bounds'
-    "*** YOUR CODE HERE ***"
-    return _______
+    nlist = [lst[i] for i in range(len(lst))]
+    for i in range(len(nlist)):
+        if i == index:
+            nlist[i] = elem
+    return nlist
 
 
 def get_piece(board, row, column):
