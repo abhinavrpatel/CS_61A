@@ -224,7 +224,11 @@ def make_move(board, max_rows, max_cols, col, player):
     >>> row
     -1
     """
-    "*** YOUR CODE HERE ***"
+    if col < 0 or col > max_cols:
+        return -1, board
+    return put_piece(board, max_rows, col, player)
+
+
 
 def print_board(board, max_rows, max_cols):
     """Prints the board. Row 0 is at the top, and column 0 at the far left.
