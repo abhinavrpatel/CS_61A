@@ -122,7 +122,6 @@ def create_row(size):
     >>> create_row(5)
     ['-', '-', '-', '-', '-']
     """
-    "*** YOUR CODE HERE ***"
     return ['-' for i in range(size) if True]
 
 
@@ -132,8 +131,7 @@ def create_board(rows, columns):
     >>> create_board(3, 5)
     [['-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-']]
     """
-    one_row = ['-' for i in range(columns)]
-    return [one_row for i in range(rows)]
+    return [create_row(columns) for i in range(rows)]
 
 
 def replace_elem(lst, index, elem):
@@ -167,8 +165,7 @@ def get_piece(board, row, column):
     >>> get_piece(board, 1, 1)
     '-'
     """
-    "*** YOUR CODE HERE ***"
-    return _______
+    return board[row][column]
 
 
 def put_piece(board, max_rows, column, player):
@@ -191,7 +188,15 @@ def put_piece(board, max_rows, column, player):
     >>> row
     -1
     """
-    "*** YOUR CODE HERE ***"
+    row = -1
+    for i in range(max_rows):
+        if board[i][column] == '-':
+            row = i
+    board[row][column] = player
+    return row, board
+
+
+
 
 
 def make_move(board, max_rows, max_cols, col, player):
