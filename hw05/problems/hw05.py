@@ -30,7 +30,12 @@ def move_stack(n, start, end):
     Move the top disk from rod 1 to rod 3
     """
     assert 1 <= start <= 3 and 1 <= end <= 3 and start != end, "Bad start/end"
-    "*** YOUR CODE HERE ***"
+    if n == 1:
+        print_move(start, end)
+    else:
+        move_stack(n-1, start, 3 + 3 - start - end)
+        print_move(start, end)
+        move_stack(n-1, 3 + 3 - start - end, end)
 
 def interval(a, b):
     """Construct an interval from a to b."""
@@ -38,11 +43,11 @@ def interval(a, b):
 
 def lower_bound(x):
     """Return the lower bound of interval x."""
-    "*** YOUR CODE HERE ***"
+    return x[0]
 
 def upper_bound(x):
     """Return the upper bound of interval x."""
-    "*** YOUR CODE HERE ***"
+    return x[1]
 
 def str_interval(x):
     """Return a string representation of interval x."""
@@ -67,7 +72,8 @@ def mul_interval(x, y):
 def sub_interval(x, y):
     """Return the interval that contains the difference between any value in x
     and any value in y."""
-    "*** YOUR CODE HERE ***"
+    min_x, max_x = min(x), max(x)
+    min_y,
 
 def div_interval(x, y):
     """Return the interval that contains the quotient of any value in x divided by
