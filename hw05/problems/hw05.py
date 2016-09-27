@@ -84,7 +84,7 @@ def div_interval(x, y):
     """Return the interval that contains the quotient of any value in x divided by
     any value in y. Division is implemented as the multiplication of x by the
     reciprocal of y."""
-    "*** YOUR CODE HERE ***"
+    assert lower_bound(y) > 0 or upper_bound(y) < 0
     reciprocal_y = interval(1/upper_bound(y), 1/lower_bound(y))
     return mul_interval(x, reciprocal_y)
 
