@@ -29,8 +29,13 @@ def key_of_min_value(d):
     'c'
     """
     # BEGIN Question 0
-    "*** REPLACE THIS LINE ***"
-    return min('REPLACE THIS WITH YOUR SOLUTION')
+    keys = sorted(list(d.keys()))
+    #print(keys)
+    min_val, min_key = d[keys[0]], keys[0]
+    for key in keys:
+        if d[key] < min_val:
+            min_key = key
+    return min_key
     # END Question 0
 
 def zip(*sequences):
@@ -62,11 +67,11 @@ def enumerate(s, start=0):
     [[5, 'f'], [6, 'i'], [7, 'v'], [8, 'e']]
     """
     # BEGIN Question 0
-    result = []
+    other = []
     for i in s:
-        result.append([start, i])
+        other.append(start)
         start += 1
-    return result
+    return zip(other, s)
     # END Question 0
 
 def distance(pos1, pos2):
