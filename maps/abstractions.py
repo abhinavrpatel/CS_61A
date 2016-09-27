@@ -96,7 +96,6 @@ def restaurant_ratings(restaurant):
     restaurant based on the reviews of the restaurant."""
     # BEGIN Question 1
     reviews = restaurant['reviews']
-    name = restaurant_name(restaurant)
     #print('\t\t\t', reviews)
     return [i[1] for i in reviews]
     # END Question 1
@@ -113,5 +112,5 @@ def restaurant_num_ratings(restaurant):
 def restaurant_mean_rating(restaurant):
     """Return the average rating for the restaurant."""
     # BEGIN Question 2
-    "*** REPLACE THIS LINE ***"
+    return sum(restaurant_ratings(restaurant))/restaurant_num_ratings(restaurant)
     # END Question 2
