@@ -26,8 +26,6 @@ def find_closest(location, centroids):
         this_dist = min(closest_dist, new_dist)
         closest = point if this_dist < closest_dist else closest
         closest_dist = this_dist
-        #if distance(point, location) < distance(location, closest):
-         #   closest = point
     return closest
     # END Question 3
 
@@ -136,7 +134,8 @@ def best_predictor(user, restaurants, feature_fns):
     """
     reviewed = user_reviewed_restaurants(user, restaurants)
     # BEGIN Question 8
-    "*** REPLACE THIS LINE ***"
+    resultant = [find_predictor(user, reviewed, f) for f in feature_fns]
+    return max(resultant, key=lambda a: a[1])[0]
     # END Question 8
 
 
