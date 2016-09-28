@@ -20,9 +20,14 @@ def find_closest(location, centroids):
     """
     # BEGIN Question 3
     closest = centroids[0]
+    closest_dist = distance(closest, location)
     for point in centroids:
-        if distance(point, location) < distance(location, closest):
-            closest = point
+        new_dist = distance(point, location)
+        this_dist = min(closest_dist, new_dist)
+        closest = point if this_dist < closest_dist else closest
+        closest_dist = this_dist
+        #if distance(point, location) < distance(location, closest):
+         #   closest = point
     return closest
     # END Question 3
 
@@ -52,7 +57,9 @@ def group_by_centroid(restaurants, centroids):
     restaurants closest to the same centroid.
     """
     # BEGIN Question 4
-
+    return group_by_first(
+        [[find_closest(restaurant_location(restaurant), centroids), restaurant]
+         for restaurant in restaurants])
     # END Question 4
 
 
