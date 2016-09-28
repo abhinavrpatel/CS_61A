@@ -151,7 +151,8 @@ def rate_all(user, restaurants, feature_fns):
     predictor = best_predictor(user, ALL_RESTAURANTS, feature_fns)
     reviewed = user_reviewed_restaurants(user, restaurants)
     # BEGIN Question 9
-    "*** REPLACE THIS LINE ***"
+    return {restaurant_name(r): user_rating(user, restaurant_name(r))
+            if r in reviewed else predictor(r) for r in restaurants}
     # END Question 9
 
 
@@ -163,7 +164,7 @@ def search(query, restaurants):
     restaurants -- A sequence of restaurants
     """
     # BEGIN Question 10
-    "*** REPLACE THIS LINE ***"
+    return [r for r in restaurants if query in restaurant_categories(r)]
     # END Question 10
 
 
