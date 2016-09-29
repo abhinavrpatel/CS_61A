@@ -7,7 +7,7 @@ def map(fn, seq):
     >>> map(lambda x: x*x, [1, 2, 3])
     [1, 4, 9]
     """
-    "*** YOUR CODE HERE ***"
+    return [fn(x) for x in seq]
 
 def filter(pred, seq):
     """Keeps elements in seq only if they satisfy pred.
@@ -15,7 +15,7 @@ def filter(pred, seq):
     >>> filter(lambda x: x % 2 == 0, [1, 2, 3, 4])
     [2, 4]
     """
-    "*** YOUR CODE HERE ***"
+    return [x for x in seq if pred(x)]
 
 def reduce(combiner, seq):
     """Combines elements in seq using combiner.
@@ -27,7 +27,15 @@ def reduce(combiner, seq):
     >>> reduce(lambda x, y: x * y, [4])
     4
     """
-    "*** YOUR CODE HERE ***"
+    assert seq
+    if len(seq) == 1:
+        return seq[0]
+    combo = combiner(seq[0], seq[1])
+    i = 2
+    while i < len(seq):
+        combo = combiner(combo, seq[i])
+        i += 1
+    return combo
 
 # pyTunes
 def make_pytunes(username):
