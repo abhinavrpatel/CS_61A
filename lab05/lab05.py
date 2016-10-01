@@ -92,7 +92,9 @@ def add_song(t, song, category):
           georgia
 
     """
-    "*** YOUR CODE HERE ***"
+    if root(t) == category:
+        return tree(root(t), branches(t) + [tree(song)])
+    return tree(root(t), [add_song(b, song, category) for b in branches(t)])
 
 # Tree ADT
 def tree(root, branches=[]):
