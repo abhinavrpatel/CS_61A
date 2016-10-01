@@ -54,7 +54,15 @@ def make_pytunes(username):
         darude
           sandstorm
     """
-    "*** YOUR CODE HERE ***"
+    return tree(username,
+                [tree('pop',
+                    [tree('justin bieber',
+                        [tree('single',
+                            [tree('what do you mean?')])]),
+                    tree('2015 pop mashup')]),
+                tree('trance',
+                    [tree('darude',
+                        [tree('sandstorm')])])])
 
 def num_songs(t):
     """Return the number of songs in the pyTunes tree, t.
@@ -63,7 +71,9 @@ def num_songs(t):
     >>> num_songs(pytunes)
     3
     """
-    "*** YOUR CODE HERE ***"
+    if is_leaf(t):
+        return 1
+    return sum([num_songs(br) for br in branches(t)])
 
 def add_song(t, song, category):
     """Returns a new tree with SONG added to CATEGORY. Assume the CATEGORY
