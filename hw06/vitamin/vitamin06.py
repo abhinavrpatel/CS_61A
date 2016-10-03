@@ -18,7 +18,16 @@ def make_counter():
     >>> c('b') + c2('b')
     5
     """
-    "*** YOUR CODE HERE ***"
+    total = {}
+    def counter(str):
+        nonlocal total
+        if str in total.keys():
+            total[str] += 1
+        else:
+            total[str] = 1
+        return total[str]
+    return counter
+
 
 def make_fib():
     """Returns a function that returns the next Fibonacci number
