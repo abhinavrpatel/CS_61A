@@ -106,6 +106,12 @@ class Account:
         """Return the number of years until balance would grow to amount."""
         assert self.balance > 0 and amount > 0 and self.interest > 0
         "*** YOUR CODE HERE ***"
+        projected, years = 0 + self.balance, 0
+        while projected < amount:
+            years += 1
+            projected += projected * self.interest
+        return years
+
 
 class FreeChecking(Account):
     """A bank account that charges for withdrawals, but the first two are free!
@@ -133,3 +139,4 @@ class FreeChecking(Account):
     free_withdrawals = 2
 
     "*** YOUR CODE HERE ***"
+    #TODO q4
