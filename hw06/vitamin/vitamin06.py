@@ -48,7 +48,20 @@ def make_fib():
     >>> fib() + sum([fib2() for _ in range(5)])
     12
     """
-    "*** YOUR CODE HERE ***"
+    terms = []
+    def fib():
+        nonlocal terms
+        if len(terms) == 0:
+            terms.append(0)
+            return sum(terms)
+        if len(terms) == 1:
+            terms.append(1)
+            return sum(terms)
+        next = sum(terms)
+        terms[0] = terms[1]
+        terms[1] = next
+        return next
+    return fib
 
 class Account:
     """An account has a balance and a holder.
