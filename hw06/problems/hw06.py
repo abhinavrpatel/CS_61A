@@ -83,6 +83,7 @@ def total_weight(m):
     else:
         return sum([total_weight(end(s)) for s in sides(m)])
 
+
 def balanced(m):
     """Return whether m is balanced.
 
@@ -99,7 +100,18 @@ def balanced(m):
     >>> balanced(mobile(side(1, w), side(1, v)))
     False
     """
-    "*** YOUR CODE HERE ***"
+    def f(x):
+        if is_weight(x):
+            return True, size(x)
+        vector = []
+        for side in sides(x):
+            balance = f(end(side))
+            vector += [[balance[0], balance[1], balance[1] * length(side)]]
+        if vector[0][2] == vector[1][2] and vector[0][0] and vector[1][0]:
+            return True, vector[0][1] + vector[1][1]
+        return False, -1
+    return f(m)[0]
+
 
 def with_totals(m):
     """Return a mobile with total weights stored as the root of each mobile.
