@@ -137,6 +137,11 @@ class FreeChecking(Account):
     """
     withdraw_fee = 1
     free_withdrawals = 2
-
-    "*** YOUR CODE HERE ***"
-    #TODO q4
+    def withdraw(self, amount):
+        if hasattr(self, 'num_withdrawals'):
+            self.num_withdrawals += 1
+            if self.num_withdrawals > FreeChecking.free_withdrawals:
+                return Account.withdraw(self, amount + FreeChecking.withdraw_fee)
+        else:
+            setattr(self, 'num_withdrawals', 1)
+        return Account.withdraw(self, amount)
