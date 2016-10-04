@@ -113,6 +113,7 @@ def balanced(m):
     return f(m)[0]
 
 
+
 def with_totals(m):
     """Return a mobile with total weights stored as the root of each mobile.
 
@@ -128,7 +129,12 @@ def with_totals(m):
     >>> [root(end(s)) for s in sides(v)]         # v should not change
     [None, None]
     """
-    "*** YOUR CODE HERE ***"
+    if is_weight(m):
+        return weight(size(m))
+    r = total_weight(m) if root(m) == None else root(m)
+    arr = [side(length(i), with_totals(end(i))) for i in sides(m)]
+    return tree(r, arr)
+
 
 ############
 # Mutation #
