@@ -35,7 +35,12 @@ class Player(object):
         destination_place = self.place.get_neighbor(location)
         if destination_place.locked:
             print(destination_place.name, 'is locked! Go look for a key to unlock it')
-        "*** YOUR CODE HERE ***"
+        elif destination_place.name == location:
+            self.place = destination_place
+        else:
+            print('Can\'t go from ', self.place.name, ' to', destination_place.name, '.')
+            print('Try looking around to see where to go.')
+        print('You are at', self.place.name)
 
 
     def talk_to(self, person):
