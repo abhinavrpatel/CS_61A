@@ -84,7 +84,6 @@ class VendingMachine:
                 change = self.credit
                 self.credit = 0
                 return 'Here is your {0} and ${1} change.'.format(self.food, change)
-        #elif self.credit < self.price:
         return 'You must deposit ${0} more.'.format(self.price - self.credit)
 
 
@@ -139,4 +138,7 @@ class MissManners:
         magic_word = 'please '
         if not message.startswith(magic_word):
             return 'You must learn to say please first.'
-        "*** YOUR CODE HERE ***"
+        message = message[len(magic_word):]
+        if hasattr(self.obj, message):
+            return getattr(self.obj, message)(*args)
+        return 'Thanks for asking, but I know not how to ' + message + '.'
