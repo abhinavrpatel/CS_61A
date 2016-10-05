@@ -154,6 +154,14 @@ class Player(object):
         "*** YOUR CODE HERE ***"
 
 
+
+
+
+
+
+
+
+
 class Character(object):
     def __init__(self, name, message):
         self.name = name
@@ -161,6 +169,14 @@ class Character(object):
 
     def talk(self):
         return self.message
+
+
+
+
+
+
+
+
 
 
 class Thing(object):
@@ -171,6 +187,19 @@ class Thing(object):
     def use(self, place):
         print("You can't use a {0} here".format(self.name))
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 """ Implement Key here! """
 
 class Treasure(Thing):
@@ -178,6 +207,13 @@ class Treasure(Thing):
         Thing.__init__(self, name, description)
         self.value = value
         self.weight = weight
+
+
+
+
+
+
+
 
 class Place(object):
     def __init__(self, name, description, characters, things):
