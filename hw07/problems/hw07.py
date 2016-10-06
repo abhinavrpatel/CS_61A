@@ -17,12 +17,17 @@ class Fib():
     >>> start.next().next().next().next().next().next()
     8
     """
-
     def __init__(self):
         self.value = 0
 
     def next(self):
-        "*** YOUR CODE HERE ***"
+        if self.value == 0:
+            self.previous = self.value
+            self.value = 1
+            return self
+        self.value, self.previous = self.previous + self.value, self.value
+        return self
+
 
     def __repr__(self):
         return str(self.value)
