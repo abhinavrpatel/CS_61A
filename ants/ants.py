@@ -82,11 +82,22 @@ class Place(object):
         return self.name
 
 
+
+
+
+
+
+
+
+
+
+
 class Insect(object):
     """An Insect, the base class of Ant and Bee, has armor and a Place."""
 
     is_ant = False
     damage = 0
+    watersafe = False
 
     def __init__(self, armor, place=None):
         """Create an Insect with an ARMOR amount and a starting PLACE."""
@@ -117,11 +128,22 @@ class Insect(object):
         return '{0}({1}, {2})'.format(cname, self.armor, self.place)
 
 
+
+
+
+
+
+
+
+
+
+
 class Bee(Insect):
     """A Bee moves from place to place, following exits and stinging ants."""
 
     name = 'Bee'
     damage = 1
+    watersafe = True
 
     def sting(self, ant):
         """Attack an ANT, reducing its armor by 1."""
@@ -152,6 +174,15 @@ class Bee(Insect):
             self.move_to(self.place.exit)
 
 
+
+
+
+
+
+
+
+
+
 class Ant(Insect):
     """An Ant occupies a place and does work for the colony."""
 
@@ -162,6 +193,11 @@ class Ant(Insect):
     def __init__(self, armor=1):
         """Create an Ant with an ARMOR quantity."""
         Insect.__init__(self, armor)
+
+
+
+
+
 
 
 class HarvesterAnt(Ant):
@@ -180,6 +216,11 @@ class HarvesterAnt(Ant):
         # BEGIN Problem 1
         colony.food += 1
         # END Problem 1
+
+
+
+
+
 
 
 class ThrowerAnt(Ant):
@@ -210,6 +251,11 @@ class ThrowerAnt(Ant):
         """Throw a leaf at the nearest Bee in range."""
         self.throw_at(self.nearest_bee(colony.hive))
 
+
+
+
+
+
 def random_or_none(s):
     """Return a random element of sequence S, or return None if S is empty."""
     if s:
@@ -226,7 +272,9 @@ class Water(Place):
     def add_insect(self, insect):
         """Add INSECT if it is watersafe, otherwise reduce its armor to 0."""
         # BEGIN Problem 3A
-        "*** REPLACE THIS LINE ***"
+        Place.add_insect(self, insect)
+        if not insect.watersafe:
+            insect.reduce_armor(insect.armor)
         # END Problem 3A
 
 
