@@ -25,7 +25,8 @@ class Place(object):
         self.entrance = None  # A Place
         # Phase 1: Add an entrance to the exit
         # BEGIN Problem 2
-        "*** REPLACE THIS LINE ***"
+        if exit:
+            self.exit.entrance = self
         # END Problem 2
 
     def add_insect(self, insect):
