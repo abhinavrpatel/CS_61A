@@ -22,9 +22,10 @@ class Fib():
 
     def next(self):
         if self.value == 0:
-            self.previous = self.value
-            self.value = 1
-            return self
+            fib = Fib()
+            fib.previous = self.value
+            fib.value = 1
+            return fib
         self.value, self.previous = self.previous + self.value, self.value
         return self
 
