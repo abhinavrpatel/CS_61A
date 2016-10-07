@@ -284,8 +284,8 @@ class FireAnt(Ant):
     name = 'Fire'
     damage = 3
     # BEGIN Problem 4A
-    "*** REPLACE THIS LINE ***"
-    implemented = False   # Change to True to view in the GUI
+    food_cost = 5
+    implemented = True
     # END Problem 4A
 
     def reduce_armor(self, amount):
@@ -294,7 +294,12 @@ class FireAnt(Ant):
         the current place.
         """
         # BEGIN Problem 4A
-        "*** REPLACE THIS LINE ***"
+        self.armor -= amount
+        if self.armor == 0:
+            shallow = list.copy(self.place.bees)
+            for bee in shallow:
+                bee.reduce_armor(self.damage)
+            self.place.remove_insect(self)
         # END Problem 4A
 
 
