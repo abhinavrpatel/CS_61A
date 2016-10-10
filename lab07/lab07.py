@@ -8,7 +8,13 @@ def list_to_link(lst):
     >>> print_link(link)
     <1 2 3>
     """
-    "*** YOUR CODE HERE ***"
+    if not lst:
+        return Link.empty
+    post = Link(lst.pop())
+    while lst:
+        post = Link(lst.pop(), post)
+    return post
+
 
 # Q3
 def link_to_list(link):
@@ -20,7 +26,9 @@ def link_to_list(link):
     >>> link_to_list(Link.empty)
     []
     """
-    "*** YOUR CODE HERE ***"
+    return [link[i] for i in range(len(link))]
+
+
 
 # Q4
 def remove_all(link , value):
