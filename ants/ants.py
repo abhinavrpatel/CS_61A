@@ -230,6 +230,8 @@ class ThrowerAnt(Ant):
     implemented = True
     damage = 1
     food_cost = 3
+    max_range = 10000
+    min_range = 0
 
     def nearest_bee(self, hive):
         """Return the nearest Bee in a Place that is not the HIVE, connected to
@@ -238,9 +240,17 @@ class ThrowerAnt(Ant):
         This method returns None if there is no such Bee (or none in range).
         """
         # BEGIN Problem 3B
-        "*** REPLACE THIS LINE ***"
-        return random_or_none(self.place.bees)
-        # END Problem 3B
+
+        place = self.place
+        distance = 0
+        bee = random_or_none(place.bees)
+        while ((not bee or distance < self.min_range) and (place != hive)):
+            place = place.entrance
+            bee = random_or_none(place.bees)
+            distance += 1
+        if place == hive or distance > self.max_range:
+            return None
+        return bee
 
     def throw_at(self, target):
         """Throw a leaf at the TARGET Bee, reducing its armor."""
