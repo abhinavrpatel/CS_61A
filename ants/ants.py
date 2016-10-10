@@ -318,8 +318,9 @@ class LongThrower(ThrowerAnt):
 
     name = 'Long'
     # BEGIN Problem 4B
-    "*** REPLACE THIS LINE ***"
-    implemented = False   # Change to True to view in the GUI
+    min_range = 5
+    food_cost = 2
+    implemented = True   # Change to True to view in the GUI
     # END Problem 4B
 
 
@@ -329,7 +330,9 @@ class ShortThrower(ThrowerAnt):
     name = 'Short'
     # BEGIN Problem 4B
     "*** REPLACE THIS LINE ***"
-    implemented = False   # Change to True to view in the GUI
+    food_cost = 2
+    max_range = 3
+    implemented = True   # Change to True to view in the GUI
     # END Problem 4B
 
 
