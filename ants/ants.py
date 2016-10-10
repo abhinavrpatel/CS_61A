@@ -158,7 +158,6 @@ class Bee(Insect):
         """Return True if this Bee cannot advance to the next Place."""
         # Phase 3: Special handling for NinjaAnt
         # BEGIN Problem 6A
-        "*** REPLACE THIS LINE ***"
         return self.place.ant is not None and self.place.ant.blocks_path
         # END Problem 6A
 
@@ -371,6 +370,14 @@ class NinjaAnt(Ant):
 # BEGIN Problem 5B
 "*** REPLACE THIS LINE ***"
 # The ScubaThrower class
+class ScubaThrower(ThrowerAnt):
+    watersafe = True
+    food_cost = 6
+    implemented = True
+    name = 'Scuba'
+
+    def __init__(self, armor=1):
+        ThrowerAnt.__init__(self, armor)
 # END Problem 5B
 
 
