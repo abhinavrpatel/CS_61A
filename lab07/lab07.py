@@ -45,7 +45,15 @@ def remove_all(link , value):
     >>> print_link(l1)
     <0 1>
     """
-    "*** YOUR CODE HERE ***"
+    if value in link:
+        remove_all(link.rest, value)
+        if value == link.first:
+            if link.rest:
+                link[0] = link.rest.first
+                link.rest = link.rest.rest
+        elif not link.rest.rest:
+            if link.rest.first == value:
+                link.rest = Link.empty
 
 # Linked List Class
 class Link:
