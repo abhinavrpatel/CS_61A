@@ -17,4 +17,10 @@ def deep_len(lst):
     >>> deep_len(x)
     100
     """
-    "*** YOUR CODE HERE ***"
+    length = 0
+    for i in lst:
+        if isinstance(i, list):
+            length += deep_len(i)
+        else:
+            length += 1
+    return length
