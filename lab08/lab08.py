@@ -18,6 +18,7 @@ def deep_len(lnk):
     else:
         return 1 + deep_len(lnk.rest)
 
+
 def make_to_string(front, mid, back, empty_repr):
     """ Returns a function that turns linked lists to strings.
 
@@ -33,7 +34,11 @@ def make_to_string(front, mid, back, empty_repr):
     >>> michelles_to_string(Link.empty)
     '()'
     """
-    "*** YOUR CODE HERE ***"
+    def toString(link):
+        if link is Link.empty:
+            return empty_repr
+        return front + str(link.first) + mid + toString(link.rest) + back
+    return toString
 
 def tree_map(fn, t):
     """Maps the function fn over the entries of tree and returns the
