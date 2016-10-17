@@ -62,7 +62,11 @@ def tree_map(fn, t):
           128
         256
     """
-    "*** YOUR CODE HERE ***"
+    #copies into a new tree so we dont mutate old one
+    new = Tree(fn(t.root), t.branches[:])
+    new.branches = [tree_map(fn, br) for br in new.branches]
+    return new
+
 
 def add_trees(t1, t2):
     """
