@@ -2,7 +2,11 @@
 
 ; Q2
 (define (over-or-under x y)
-  'YOUR-CODE-HERE
+  (cond
+    ((< x y) -1)
+    ((= x y) 0)
+    ((> x y) 1)
+  )
 )
 
 ;;; Tests
