@@ -10,9 +10,14 @@
 )
 
 (define (sign x)
-  'YOUR-CODE-HERE
-  nil
+  (cond
+    ((= x 0) 0)
+    ((< x 0) -1)
+    (else 1)
+  )
 )
+
+
 
 (define (square x) (* x x))
 
