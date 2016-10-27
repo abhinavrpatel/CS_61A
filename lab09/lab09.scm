@@ -39,19 +39,29 @@
   )
 )
 
-
-
-
-
 ;;; Tests
 (define (even? x)
   (= (modulo x 2) 0))
 (filter even? '(0 1 1 2 3 5 8))
 ; expect (0 2 8)
 
+
+
+
+
+
+
+
+
+
+
+
 ; Q4
 (define (make-adder num)
-  'YOUR-CODE-HERE
+    (
+    lambda (x)
+        (+ x num)
+    )
 )
 
 ;;; Tests
