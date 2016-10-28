@@ -30,8 +30,11 @@
 )
 
 (define (ordered? s)
-  'YOUR-CODE-HERE
-  nil
+  (if (null? s) True
+  (if (null? (cdr s)) True
+    (if (> (car s) (car (cdr s))) False (ordered? (cdr s )))
+  )
+  )
 )
 
 (define (nodots s)
