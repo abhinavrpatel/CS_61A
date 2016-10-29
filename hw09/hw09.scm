@@ -29,17 +29,22 @@
   )
 )
 
+
 (define (ordered? s)
   (if (null? s) True
   (if (null? (cdr s)) True
     (if (> (car s) (car (cdr s))) False (ordered? (cdr s )))
   )
   )
-)
+) 
 
 (define (nodots s)
-  'YOUR-CODE-HERE
-  nil
+  (cond
+    ((null? s) '())
+    ((not (pair? s)) (list s))
+    ((pair? (car s)) (cons (nodots (car s)) (nodots (cdr s))))
+    (else (cons (car s) (nodots (cdr s))))
+  )
 )
 
 ; Sets as sorted lists
