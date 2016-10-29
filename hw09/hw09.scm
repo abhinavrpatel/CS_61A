@@ -49,17 +49,26 @@
 
 ; Sets as sorted lists
 
+
+
 (define (empty? s) (null? s))
 
+
 (define (contains? s v)
-    (cond ((empty? s) false)
-          'YOUR-CODE-HERE
-          (else nil) ; replace this line
-          ))
+    (cond 
+        ((empty? s) false)
+        ((> (car s) v) false) 
+        ((= (car s) v) true)
+        (else (contains? (cdr s) v))
+    )
+)
+
+
+
 
 ; Equivalent Python code, for your reference:
 ;
-; def empty(s):
+; def empty(s):c
 ;     return s is Link.empty
 ;
 ; def contains(s, v):
