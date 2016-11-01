@@ -56,9 +56,9 @@
 
 (define (contains? s v)
     (cond 
-        ((empty? s) false)
-        ((> (car s) v) false) 
+        ((empty? s) false)     
         ((= (car s) v) true)
+        ((< v (car s)) false)
         (else (contains? (cdr s) v))
     )
 )
@@ -82,10 +82,13 @@
 ;         return contains(s.rest, v)
 
 (define (add s v)
-    (cond ((empty? s) (list v))
-          'YOUR-CODE-HERE
-          (else nil) ; replace this line
-          ))
+    (cond 
+        ((empty? s) list v)
+        ((= (car s) v) s)
+        ((> (car s) v) (append (list v) s))
+        (else (cons (car s) (add (cdr s) v)))
+    )
+)
 
 (define (intersect s t)
     (cond ((or (empty? s) (empty? t)) nil)
