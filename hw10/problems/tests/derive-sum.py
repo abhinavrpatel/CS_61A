@@ -7,8 +7,7 @@ test = {
         {
           'code': r"""
           scm> (make-sum 1 3)
-          e7bbf92744f33acda0f8f4d93ef2bb79
-          # locked
+          4
           scm> (make-sum 'x 0)
           5d643de01ee901515c3958fa5a17f9b8
           # locked
