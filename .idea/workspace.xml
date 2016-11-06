@@ -2,9 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e051930f-de56-47d9-80c0-c00d8b2d3715" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab10/.ok_history" afterPath="$PROJECT_DIR$/lab10/.ok_history" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw11/ok" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/images/h1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/images/hax.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/images/money_tree.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/images/tree.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/ok" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw11/hw11.ok" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw11/hw11.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/buffer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/proj04.ok" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/questions.scm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/scheme.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/scheme_primitives.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/scheme_reader.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/scheme_tokens.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/tests.scm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/tests/01.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/tests/02.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/tests/03.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/tests/04.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/tests/05.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/tests/06.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/tests/07.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/tests/08.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/tests/09.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/tests/10.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/tests/11.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/tests/12.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/tests/13.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/tests/14.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/tests/15.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/tests/16.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/tests/17.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/tests/18.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/tests/19.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/tests/20.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/tests/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/tests/eval_apply.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/ucb.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab10/expr.py" afterPath="$PROJECT_DIR$/lab10/expr.py" />
     </list>
     <ignored path="CS 61A.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,7 +60,18 @@
     <favorites_list name="CS 61A" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="hw11.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hw11/hw11.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -73,6 +121,7 @@
         <option value="$PROJECT_DIR$/hw09/hw09.scm" />
         <option value="$PROJECT_DIR$/lab10/expr.py" />
         <option value="$PROJECT_DIR$/hw10/problems/tests/derive-sum.py" />
+        <option value="$PROJECT_DIR$/hw11/hw11.py" />
       </list>
     </option>
   </component>
@@ -178,7 +227,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lab10" />
+              <option name="myItemId" value="scheme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS 61A" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CS 61A" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hw11" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -343,13 +406,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1472144754646</updated>
-    </task>
-    <task id="LOCAL-00103" summary="post submit">
-      <created>1475623909145</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1475623909145</updated>
     </task>
     <task id="LOCAL-00104" summary="initial">
       <created>1475628800468</created>
@@ -687,7 +743,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478145798973</updated>
     </task>
-    <option name="localTasksCounter" value="152" />
+    <task id="LOCAL-00152" summary="lab10 done">
+      <created>1478472405122</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1478472405123</updated>
+    </task>
+    <option name="localTasksCounter" value="153" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -701,9 +764,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1315229" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1315229" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29377204" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946298" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12683438" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -754,7 +817,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="4A implemented and working" />
     <MESSAGE value="post 3B finished" />
     <MESSAGE value="4B done" />
     <MESSAGE value="5A done" />
@@ -779,7 +841,8 @@
     <MESSAGE value="ordered done" />
     <MESSAGE value="todo: apply operator to the evaluated arguments" />
     <MESSAGE value="quiz done" />
-    <option name="LAST_COMMIT_MESSAGE" value="quiz done" />
+    <MESSAGE value="lab10 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab10 done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -788,13 +851,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hw01/problems/hw01.ok">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hw01/problems/hw01.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
@@ -1137,6 +1193,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw11/hw11.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
           <folding />
         </state>
       </provider>
