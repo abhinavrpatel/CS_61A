@@ -178,11 +178,9 @@ class CallExpr(Expr):
         >>> read('add(mul(3, 4), b)').eval(new_env)
         Number(14)
         """
-        arguments = []
-        for arg in self.operands:
-            arguments.append(arg.eval(env))
-        oper = self.operator
-        #todo apply operator to the evaluated arguments
+        opers = [o.eval(env) for o in self.operands]
+        return self.operator.eval(env).apply(opers)
+
 
 
 
@@ -215,7 +213,7 @@ class Value:
     is a list of `Value` instances, the arguments to this function. It should
     return a `Value` instance, the result of applying the function.
 
-    Note that only functions can be "applied"; attempting to apply a `Number` 
+    Note that only functions can be "applied"; attempting to apply a `Number`
     (e.g. as in 4(2, 3)) will raise an exception.
 
     A value type's `__str__` should show a parsable and human-readable version of
