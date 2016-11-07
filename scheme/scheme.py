@@ -31,7 +31,7 @@ def scheme_eval(expr, env, _=None): # Optional third argument is ignored
         return SPECIAL_FORMS[first](rest, env)
     else:
         # BEGIN PROBLEM 5
-        "*** REPLACE THIS LINE ***"
+        return scheme_apply(scheme_eval(first, env), rest.map(lambda operand: scheme_eval(operand, env)), env)
         # END PROBLEM 5
 
 def self_evaluating(expr):

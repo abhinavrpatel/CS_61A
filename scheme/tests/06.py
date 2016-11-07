@@ -5,7 +5,7 @@ test = {
     {
       'cases': [
         {
-          'answer': 'fafe1301fe2e206817bdc9dd9e3a389d',
+          'answer': 'Pair(A, Pair(B, nil)), where: A is the symbol being bound, B is an expression whose value should be bound to A',
           'choices': [
             r"""
             Pair(A, Pair(B, nil)), where:
@@ -34,11 +34,11 @@ test = {
             """
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'What is the structure of the expressions argument to do_define_form?'
         },
         {
-          'answer': 'b2dc2d8fc11300d5e68ab1e5dbaef0c4',
+          'answer': 'define',
           'choices': [
             'make_child_frame',
             'define',
@@ -46,7 +46,7 @@ test = {
             'bindings'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': r"""
           What method of a Frame instance will bind
           a value to a symbol in that frame?

@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e051930f-de56-47d9-80c0-c00d8b2d3715" name="Default" comment="lab 11 done and submitted">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab11/.ok_history" afterPath="$PROJECT_DIR$/lab11/.ok_history" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scheme/.ok_history" afterPath="$PROJECT_DIR$/scheme/.ok_history" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab11/lab11.py" afterPath="$PROJECT_DIR$/lab11/lab11.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scheme/scheme.py" afterPath="$PROJECT_DIR$/scheme/scheme.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scheme/tests/06.py" afterPath="$PROJECT_DIR$/scheme/tests/06.py" />
     </list>
@@ -27,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="scheme.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="scheme.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scheme/scheme.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+            <state relative-caret-position="615">
+              <caret line="49" column="31" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
               <folding>
                 <element signature="e#147#161#0" expanded="false" />
               </folding>
@@ -44,16 +42,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="675">
               <caret line="62" column="22" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lab11.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lab11/lab11.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="791">
-              <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -123,8 +111,8 @@
         <option value="$PROJECT_DIR$/scheme/tests/01.py" />
         <option value="$PROJECT_DIR$/scheme/buffer.py" />
         <option value="$PROJECT_DIR$/scheme/scheme_reader.py" />
-        <option value="$PROJECT_DIR$/scheme/scheme.py" />
         <option value="$PROJECT_DIR$/lab11/lab11.py" />
+        <option value="$PROJECT_DIR$/scheme/scheme.py" />
       </list>
     </option>
   </component>
@@ -249,38 +237,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CS 61A" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CS 61A" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scheme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CS 61A" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CS 61A" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lab11" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -445,13 +401,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1472144754646</updated>
-    </task>
-    <task id="LOCAL-00112" summary="miss manners done">
-      <created>1475708926497</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1475708926497</updated>
     </task>
     <task id="LOCAL-00113" summary="post vitamin submit">
       <created>1475710048270</created>
@@ -789,7 +738,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478556979499</updated>
     </task>
-    <option name="localTasksCounter" value="161" />
+    <task id="LOCAL-00161" summary="lab 11 done and submitted">
+      <created>1478561099728</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1478561099728</updated>
+    </task>
+    <option name="localTasksCounter" value="162" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -856,7 +812,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="remove link q4 done" />
     <MESSAGE value="completed with EC LOL" />
     <MESSAGE value="q1 done&#10;" />
     <MESSAGE value="deep_len works" />
@@ -881,7 +836,8 @@
     <MESSAGE value="q2 done" />
     <MESSAGE value="q3 done" />
     <MESSAGE value="q1 done" />
-    <option name="LAST_COMMIT_MESSAGE" value="q1 done" />
+    <MESSAGE value="lab 11 done and submitted" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab 11 done and submitted" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1225,13 +1181,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scheme/scheme.py">
+    <entry file="file://$PROJECT_DIR$/lab11/lab11.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
-          <folding>
-            <element signature="e#147#161#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="791">
+          <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1243,11 +1197,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lab11/lab11.py">
+    <entry file="file://$PROJECT_DIR$/scheme/scheme.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="791">
-          <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
-          <folding />
+        <state relative-caret-position="615">
+          <caret line="49" column="31" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
+          <folding>
+            <element signature="e#147#161#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
