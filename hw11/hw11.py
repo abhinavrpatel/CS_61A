@@ -35,7 +35,13 @@ def permutations(lst):
     if not lst:
         yield []
         return
-    "*** YOUR CODE HERE ***"
+    if len(lst) == 1:
+        yield [lst[0]]
+        return
+
+    for p in permutations(lst[1:]):
+            for i in range(len(lst)):
+                yield p[:i] + [lst[0]] + p[i:]
 
 class Tree:
     def __init__(self, root, branches=[]):

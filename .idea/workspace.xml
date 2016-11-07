@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e051930f-de56-47d9-80c0-c00d8b2d3715" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw11/ok" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/images/h1.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/images/hax.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/images/money_tree.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/images/tree.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/ok" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw11/hw11.ok" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw11/hw11.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/buffer.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/proj04.ok" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/questions.scm" />
@@ -41,7 +38,9 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/tests/__init__.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/tests/eval_apply.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scheme/ucb.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hw11/.ok_history" afterPath="$PROJECT_DIR$/hw11/.ok_history" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hw11/hw11.py" afterPath="$PROJECT_DIR$/hw11/hw11.py" />
     </list>
     <ignored path="CS 61A.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,8 +63,8 @@
       <file leaf-file-name="hw11.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hw11/hw11.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+            <state relative-caret-position="611">
+              <caret line="74" column="7" selection-start-line="74" selection-start-column="7" selection-end-line="74" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -407,13 +406,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472144754646</updated>
     </task>
-    <task id="LOCAL-00104" summary="initial">
-      <created>1475628800468</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1475628800469</updated>
-    </task>
     <task id="LOCAL-00105" summary="post unlocks">
       <created>1475632998583</created>
       <option name="number" value="00105" />
@@ -750,7 +742,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478472405123</updated>
     </task>
-    <option name="localTasksCounter" value="153" />
+    <task id="LOCAL-00153" summary="inorder done">
+      <created>1478475056188</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1478475056188</updated>
+    </task>
+    <option name="localTasksCounter" value="154" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -817,7 +816,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="post 3B finished" />
     <MESSAGE value="4B done" />
     <MESSAGE value="5A done" />
     <MESSAGE value="6A done" />
@@ -842,7 +840,8 @@
     <MESSAGE value="todo: apply operator to the evaluated arguments" />
     <MESSAGE value="quiz done" />
     <MESSAGE value="lab10 done" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab10 done" />
+    <MESSAGE value="inorder done" />
+    <option name="LAST_COMMIT_MESSAGE" value="inorder done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1199,8 +1198,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hw11/hw11.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+        <state relative-caret-position="611">
+          <caret line="74" column="7" selection-start-line="74" selection-start-column="7" selection-end-line="74" selection-end-column="7" />
           <folding />
         </state>
       </provider>
