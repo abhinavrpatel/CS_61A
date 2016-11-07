@@ -145,7 +145,12 @@ def read_tail(src):
             # END PROBLEM 1
         elif src.current() == '.':
             # BEGIN PROBLEM 2
-            "*** REPLACE THIS LINE ***"
+            src.remove_front()
+            v = scheme_read(src)
+            if src.current() != ')':
+                raise SyntaxError()
+            src.remove_front()
+            return v
             # END PROBLEM 2
         else:
             # BEGIN PROBLEM 1
