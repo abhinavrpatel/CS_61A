@@ -29,7 +29,15 @@ def trap(s, k):
     ValueError
     """
     assert len(s) >= k
-    "*** YOUR CODE HERE ***"
+    def gen():
+        done = 0
+        m_iter = iter(s)
+        while done < k:
+            yield next(m_iter)
+            done += 1
+        raise ValueError()
+    return gen()
+
 
 def repeated(t, k):
     """Return the first value in iterator T that appears K times in a row.
@@ -43,7 +51,26 @@ def repeated(t, k):
     None
     """
     assert k > 1
-    "*** YOUR CODE HERE ***"
+    appeared = []
+    try:
+        for temp in t:
+            if not appeared:
+                appeared = [temp]
+                continue
+
+
+            if len(appeared) + 1 == k and temp in appeared:
+                return appeared[0]
+            elif temp in appeared:
+                appeared.append(temp)
+            else:
+                appeared = [temp]
+    except StopIteration:
+        pass
+
+
+
+
 
 def hailstone(n):
     """
@@ -58,4 +85,17 @@ def hailstone(n):
     2
     1
     """
-    "*** YOUR CODE HERE ***"
+#     Pick a positive integer n as the start.
+# If n is even, divide it by 2.
+# If n is odd, multiply it by 3 and add 1.
+# Continue this process until n is 1.
+
+    while n > 1:
+        yield n
+        if n % 2 == 1:
+            n = 1 + n * 3
+            continue
+        if n % 2 == 0:
+            n //= 2
+            continue
+    yield 1 #base case ending
