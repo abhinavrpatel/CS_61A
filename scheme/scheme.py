@@ -259,7 +259,7 @@ def do_if_form(expressions, env):
 def do_and_form(expressions, env):
     """Evaluate a short-circuited and form."""
     # BEGIN PROBLEM 13
-    val = True
+    val = True # and expression default value
     while expressions is not nil:
         val = scheme_eval(expressions.first, env)
         if val is False:
@@ -271,7 +271,7 @@ def do_and_form(expressions, env):
 def do_or_form(expressions, env):
     """Evaluate a short-circuited or form."""
     # BEGIN PROBLEM 13
-    val = False
+    val = False # or expression default value
     while expressions is not nil:
         val = scheme_eval(expressions.first, env)
         if val is not False:
@@ -293,7 +293,8 @@ def do_cond_form(expressions, env):
             test = scheme_eval(clause.first, env)
         if scheme_truep(test):
             # BEGIN PROBLEM 14
-            "*** REPLACE THIS LINE ***"
+            m_TODO = clause.second
+            return test if m_TODO is nil else eval_all(m_TODO, env)
             # END PROBLEM 14
         expressions = expressions.second
 
