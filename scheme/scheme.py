@@ -47,8 +47,11 @@ def scheme_apply(procedure, args, env):
 def eval_all(expressions, env):
     """Evaluate a Scheme list of EXPRESSIONS & return the value of the last."""
     # BEGIN PROBLEM 8
-    "*** REPLACE THIS LINE ***"
-    return scheme_eval(expressions.first, env)
+    last = None
+    while expressions is not nil:
+        last = scheme_eval(expressions.first, env)
+        expressions = expressions.second
+    return last
     # END PROBLEM 8
 
 ################
