@@ -5,7 +5,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scheme/.ok_history" afterPath="$PROJECT_DIR$/scheme/.ok_history" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scheme/scheme.py" afterPath="$PROJECT_DIR$/scheme/scheme.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scheme/tests/09.py" afterPath="$PROJECT_DIR$/scheme/tests/09.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scheme/tests/10.py" afterPath="$PROJECT_DIR$/scheme/tests/10.py" />
     </list>
     <ignored path="CS 61A.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,42 +24,21 @@
     <favorites_list name="CS 61A" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5556595">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="scheme.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/scheme/scheme.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="523">
-                  <caret line="238" column="31" selection-start-line="238" selection-start-column="31" selection-end-line="238" selection-end-column="31" />
-                  <folding>
-                    <element signature="e#58#89#0" expanded="true" />
-                    <element signature="e#147#161#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="scheme.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/scheme/scheme.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1288">
-                  <caret line="241" column="11" selection-start-line="241" selection-start-column="11" selection-end-line="241" selection-end-column="11" />
-                  <folding>
-                    <element signature="e#58#89#0" expanded="true" />
-                    <element signature="e#147#161#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="scheme.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scheme/scheme.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="328">
+              <caret line="313" column="44" selection-start-line="313" selection-start-column="44" selection-end-line="313" selection-end-column="44" />
+              <folding>
+                <element signature="e#58#89#0" expanded="true" />
+                <element signature="e#147#161#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -404,13 +383,6 @@
       <option name="presentableId" value="Default" />
       <updated>1472144754646</updated>
     </task>
-    <task id="LOCAL-00116" summary="problem 1 done">
-      <created>1475794676228</created>
-      <option name="number" value="00116" />
-      <option name="presentableId" value="LOCAL-00116" />
-      <option name="project" value="LOCAL" />
-      <updated>1475794676228</updated>
-    </task>
     <task id="LOCAL-00117" summary="q2 done">
       <created>1475794897923</created>
       <option name="number" value="00117" />
@@ -747,7 +719,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478577958029</updated>
     </task>
-    <option name="localTasksCounter" value="165" />
+    <task id="LOCAL-00165" summary="part 9 (LamdaProcedure) is working">
+      <created>1478579110478</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1478579110478</updated>
+    </task>
+    <option name="localTasksCounter" value="166" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -814,7 +793,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="make to string works" />
     <MESSAGE value="tree_map works" />
     <MESSAGE value="initial" />
     <MESSAGE value="wwsp q1 done" />
@@ -839,7 +817,8 @@
     <MESSAGE value="part six completed" />
     <MESSAGE value="part seven is completed and working" />
     <MESSAGE value="part 8 is working" />
-    <option name="LAST_COMMIT_MESSAGE" value="part 8 is working" />
+    <MESSAGE value="part 9 (LamdaProcedure) is working" />
+    <option name="LAST_COMMIT_MESSAGE" value="part 9 (LamdaProcedure) is working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1203,8 +1182,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scheme/scheme.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="238" column="31" selection-start-line="238" selection-start-column="31" selection-end-line="238" selection-end-column="31" />
+        <state relative-caret-position="328">
+          <caret line="313" column="44" selection-start-line="313" selection-start-column="44" selection-end-line="313" selection-end-column="44" />
           <folding>
             <element signature="e#58#89#0" expanded="true" />
             <element signature="e#147#161#0" expanded="false" />
