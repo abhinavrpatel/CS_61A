@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e051930f-de56-47d9-80c0-c00d8b2d3715" name="Default" comment="lab 11 done and submitted">
+    <list default="true" id="e051930f-de56-47d9-80c0-c00d8b2d3715" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scheme/.ok_history" afterPath="$PROJECT_DIR$/scheme/.ok_history" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scheme/scheme.py" afterPath="$PROJECT_DIR$/scheme/scheme.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scheme/tests/06.py" afterPath="$PROJECT_DIR$/scheme/tests/06.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scheme/scheme_reader.py" afterPath="$PROJECT_DIR$/scheme/scheme_reader.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scheme/tests/07.py" afterPath="$PROJECT_DIR$/scheme/tests/07.py" />
     </list>
     <ignored path="CS 61A.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,31 +25,39 @@
     <favorites_list name="CS 61A" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="scheme.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scheme/scheme.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="211" column="23" selection-start-line="211" selection-start-column="23" selection-end-line="211" selection-end-column="23" />
-              <folding>
-                <element signature="e#58#89#0" expanded="true" />
-                <element signature="e#147#161#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scheme_reader.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scheme/scheme_reader.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-615">
-              <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="scheme.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/scheme/scheme.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="630">
+                  <caret line="224" column="28" selection-start-line="224" selection-start-column="28" selection-end-line="224" selection-end-column="28" />
+                  <folding>
+                    <element signature="e#58#89#0" expanded="true" />
+                    <element signature="e#147#161#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="scheme_reader.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/scheme/scheme_reader.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="405">
+                  <caret line="115" column="20" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -101,9 +110,9 @@
         <option value="$PROJECT_DIR$/hw11/hw11.py" />
         <option value="$PROJECT_DIR$/scheme/tests/01.py" />
         <option value="$PROJECT_DIR$/scheme/buffer.py" />
-        <option value="$PROJECT_DIR$/scheme/scheme_reader.py" />
         <option value="$PROJECT_DIR$/lab11/lab11.py" />
         <option value="$PROJECT_DIR$/scheme/scheme.py" />
+        <option value="$PROJECT_DIR$/scheme/scheme_reader.py" />
       </list>
     </option>
   </component>
@@ -392,13 +401,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1472144754646</updated>
-    </task>
-    <task id="LOCAL-00113" summary="post vitamin submit">
-      <created>1475710048270</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1475710048270</updated>
     </task>
     <task id="LOCAL-00114" summary="fix mutable value FIB bug. everything else works">
       <created>1475730332314</created>
@@ -736,7 +738,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478561099728</updated>
     </task>
-    <option name="localTasksCounter" value="162" />
+    <task id="LOCAL-00162" summary="part six completed">
+      <created>1478573601901</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1478573601901</updated>
+    </task>
+    <option name="localTasksCounter" value="163" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -752,7 +761,7 @@
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11980831" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11980831" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29377204" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946298" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12683438" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -803,7 +812,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="completed with EC LOL" />
     <MESSAGE value="q1 done&#10;" />
     <MESSAGE value="deep_len works" />
     <MESSAGE value="make to string works" />
@@ -828,7 +836,8 @@
     <MESSAGE value="q3 done" />
     <MESSAGE value="q1 done" />
     <MESSAGE value="lab 11 done and submitted" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab 11 done and submitted" />
+    <MESSAGE value="part six completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="part six completed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1180,22 +1189,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scheme/scheme_reader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-615">
-          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scheme/scheme.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="211" column="23" selection-start-line="211" selection-start-column="23" selection-end-line="211" selection-end-column="23" />
+        <state relative-caret-position="630">
+          <caret line="224" column="28" selection-start-line="224" selection-start-column="28" selection-end-line="224" selection-end-column="28" />
           <folding>
             <element signature="e#58#89#0" expanded="true" />
             <element signature="e#147#161#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scheme/scheme_reader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="115" column="20" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
