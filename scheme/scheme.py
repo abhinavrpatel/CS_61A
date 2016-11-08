@@ -101,7 +101,12 @@ class Frame:
         """
         child = Frame(self) # Create a new child with self as the parent
         # BEGIN PROBLEM 11
-        "*** REPLACE THIS LINE ***"
+        if len(formals) != len(vals):
+            raise SchemeError("Number of parameters do not match")
+        iter_a, iter_b = formals, vals
+        while iter_a is not nil and iter_b is not nil:
+            child.define(iter_a.first, iter_b.first)
+            iter_a, iter_b = iter_a.second, iter_b.second
         # END PROBLEM 11
         return child
 
