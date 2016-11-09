@@ -312,7 +312,14 @@ def make_let_frame(bindings, env):
     if not scheme_listp(bindings):
         raise SchemeError('bad bindings list in let form')
     # BEGIN PROBLEM 15
-    "*** REPLACE THIS LINE ***"
+    values, names = nil, nil
+    while bindings is not nil:
+        check_form(bindings.first, 2, 2)
+        values = Pair(scheme_eval(bindings.first.second.first, env), values)
+        names = Pair(bindings.first.first, names)
+        bindings = bindings.second
+    check_formals(names)
+    return env.make_child_frame(names, values)
     # END PROBLEM 15
 
 SPECIAL_FORMS = {
