@@ -17,16 +17,22 @@
 ;; Returns a list of two-element lists
 (define (enumerate s)
   ; BEGIN PROBLEM 17
-  'replace-this-line
+  (m-constructer 0 s)
+)
+
+(define (m-constructer index lst)
+  (if (null? lst) '()
+    (cons (list index (car lst)) (m-constructer (+ 1 index) (cdr lst)))
   )
+)
   ; END PROBLEM 17
 
 ;; Problem 18
 ;; List all ways to make change for TOTAL with DENOMS
 (define (list-change total denoms)
   ; BEGIN PROBLEM 18
-  'replace-this-line
-  )
+
+)
   ; END PROBLEM 18
 
 ;; Problem 19
