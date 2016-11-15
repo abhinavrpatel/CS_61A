@@ -14,8 +14,22 @@
   (map (lambda (x) (cons first x)) rests)
 )
 
+
+
 (define (zip pairs)
-  (map list pairs)
+  (define (left pairs)
+    (cond
+      ((null? pairs) pairs)
+      (else (cons (caar pairs) (left (cdr pairs))))
+    )
+  )
+  (define (right pairs)
+    (cond
+      ((null? pairs) pairs)
+      (else (cons (car (cdr (car pairs))) (right (cdr pairs))))
+    )
+  )
+  (cons (left pairs) (cons (right pairs) nil))
 )
 
 ;; Problem 17
@@ -81,18 +95,20 @@
                (params (cadr expr))
                (body   (cddr expr)))
            ; BEGIN PROBLEM 19
-           (append (list form params) body)
+           (append (list form) (list (map let-to-lambda params)) (map let-to-lambda body))
            ; END PROBLEM 19
            ))
         ((let? expr)
          (let ((values (cadr expr))
                (body   (cddr expr)))
            ; BEGIN PROBLEM 19
-           'replace-this-line
+           (append (list
+             (append (list 'lambda (map let-to-lambda (car (zip values)))) (map let-to-lambda body)))
+              (map let-to-lambda (cadr (zip values))))
            ; END PROBLEM 19
            ))
         (else
          ; BEGIN PROBLEM 19
-         'replace-this-line
+         (map let-to-lambda expr)
          ; END PROBLEM 19
          )))
