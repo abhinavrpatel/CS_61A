@@ -15,22 +15,27 @@
 )
 
 
+(define (m-left pairs)
+  (if (null? pairs) nil
+    (cons (caar pairs) (m-left (cdr pairs)))
+  )
+)
+
+
+(define (m-right pairs)
+  (if (null? pairs) nil
+    (cons (car (cdr (car pairs))) (m-right (cdr pairs)))
+  )
+)
+
 
 (define (zip pairs)
-  (define (left pairs)
-    (cond
-      ((null? pairs) pairs)
-      (else (cons (caar pairs) (left (cdr pairs))))
-    )
-  )
-  (define (right pairs)
-    (cond
-      ((null? pairs) pairs)
-      (else (cons (car (cdr (car pairs))) (right (cdr pairs))))
-    )
-  )
-  (cons (left pairs) (cons (right pairs) nil))
+  (cons (m-left pairs) (cons (m-right pairs) nil))
 )
+
+
+
+
 
 ;; Problem 17
 (define (m-builder index lst)
@@ -79,36 +84,41 @@
 ;; Converts all let special forms in EXPR into equivalent forms using lambda
 (define (let-to-lambda expr)
   (cond
-         ((atom? expr) ; todo this is a primitive type
+     ((atom? expr) ; todo this is a primitive type
+     ; BEGIN PROBLEM 19
+     expr
+     ; END PROBLEM 19
+     )
+     ((quoted? expr)
+     ; BEGIN PROBLEM 19
+     expr
+     ; END PROBLEM 19
+     )
+     ((or (lambda? expr) (define? expr))
+       (let ((form   (car expr))
+             (params (cadr expr))
+             (body   (cddr expr)))
          ; BEGIN PROBLEM 19
-         expr
+         (append (list form) (list (map let-to-lambda params)) (map let-to-lambda body))
          ; END PROBLEM 19
-         )
-         ((quoted? expr)
-         ; BEGIN PROBLEM 19
-         expr
-         ; END PROBLEM 19
-         )
-         ((or (lambda? expr)
-             (define? expr))
-         (let ((form   (car expr))
-               (params (cadr expr))
-               (body   (cddr expr)))
-           ; BEGIN PROBLEM 19
-           (append (list form) (list (map let-to-lambda params)) (map let-to-lambda body))
-           ; END PROBLEM 19
-           ))
-        ((let? expr)
-         (let ((values (cadr expr))
-               (body   (cddr expr)))
-           ; BEGIN PROBLEM 19
-           (append (list
-             (append (list 'lambda (map let-to-lambda (car (zip values)))) (map let-to-lambda body)))
-              (map let-to-lambda (cadr (zip values))))
-           ; END PROBLEM 19
-           ))
-        (else
-         ; BEGIN PROBLEM 19
-         (map let-to-lambda expr)
-         ; END PROBLEM 19
-         )))
+       )
+    )
+    ((let? expr)
+     (let ((values (cadr expr))
+           (body   (cddr expr)))
+       ; BEGIN PROBLEM 19
+       (append (list
+         (append (list
+           'lambda (map let-to-lambda (car (zip values)))) (map let-to-lambda body)))
+         (map let-to-lambda (cadr (zip values)))
+       )
+       ; END PROBLEM 19
+      )
+    )
+    (else
+     ; BEGIN PROBLEM 19
+     (map let-to-lambda expr)
+     ; END PROBLEM 19
+    )
+  )
+)
