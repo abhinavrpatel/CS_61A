@@ -6,8 +6,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hw12/hw12.scm" afterPath="$PROJECT_DIR$/hw12/hw12.scm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scheme/.ok_history" afterPath="$PROJECT_DIR$/scheme/.ok_history" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scheme/questions.scm" afterPath="$PROJECT_DIR$/scheme/questions.scm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scheme/tests/19.py" afterPath="$PROJECT_DIR$/scheme/tests/19.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scheme/scheme.py" afterPath="$PROJECT_DIR$/scheme/scheme.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scheme/tests/16.py" afterPath="$PROJECT_DIR$/scheme/tests/16.py" />
     </list>
     <ignored path="CS 61A.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,11 +34,11 @@
               <file leaf-file-name="scheme.py" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/scheme/scheme.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="15">
-                      <caret line="402" column="0" selection-start-line="402" selection-start-column="0" selection-end-line="402" selection-end-column="0" />
+                    <state relative-caret-position="30">
+                      <caret line="403" column="0" selection-start-line="403" selection-start-column="0" selection-end-line="403" selection-end-column="0" />
                       <folding>
                         <element signature="e#58#89#0" expanded="true" />
-                        <element signature="e#147#161#0" expanded="false" />
+                        <element signature="e#162#176#0" expanded="false" />
                       </folding>
                     </state>
                   </provider>
@@ -51,8 +51,8 @@
               <file leaf-file-name="scheme_primitives.py" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/scheme/scheme_primitives.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="255">
-                      <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+                    <state relative-caret-position="525">
+                      <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
                       <folding />
                     </state>
                   </provider>
@@ -358,13 +358,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1472144754646</updated>
-    </task>
-    <task id="LOCAL-00125" summary="6A done">
-      <created>1476135779429</created>
-      <option name="number" value="00125" />
-      <option name="presentableId" value="LOCAL-00125" />
-      <option name="project" value="LOCAL" />
-      <updated>1476135779429</updated>
     </task>
     <task id="LOCAL-00126" summary="initial commit">
       <created>1476135806926</created>
@@ -702,7 +695,14 @@
       <option name="project" value="LOCAL" />
       <updated>1479193979758</updated>
     </task>
-    <option name="localTasksCounter" value="174" />
+    <task id="LOCAL-00174" summary="skipped q16, all scheme works, this is pre-no copy changes so we dont get rekt">
+      <created>1479196454531</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1479196454531</updated>
+    </task>
+    <option name="localTasksCounter" value="175" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -769,7 +769,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="pow done" />
     <MESSAGE value="ordered done" />
     <MESSAGE value="todo: apply operator to the evaluated arguments" />
     <MESSAGE value="quiz done" />
@@ -794,7 +793,8 @@
     <MESSAGE value="question 15 completed" />
     <MESSAGE value="SKIPPED QUESTION 16 AT THIS POINT, q17 done" />
     <MESSAGE value="skipped q16, but q17 and q18 work because SID clutches up" />
-    <option name="LAST_COMMIT_MESSAGE" value="skipped q16, but q17 and q18 work because SID clutches up" />
+    <MESSAGE value="skipped q16, all scheme works, this is pre-no copy changes so we dont get rekt" />
+    <option name="LAST_COMMIT_MESSAGE" value="skipped q16, all scheme works, this is pre-no copy changes so we dont get rekt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1135,20 +1135,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scheme/scheme.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="402" column="0" selection-start-line="402" selection-start-column="0" selection-end-line="402" selection-end-column="0" />
+        <state relative-caret-position="30">
+          <caret line="403" column="0" selection-start-line="403" selection-start-column="0" selection-end-line="403" selection-end-column="0" />
           <folding>
             <element signature="e#58#89#0" expanded="true" />
-            <element signature="e#147#161#0" expanded="false" />
+            <element signature="e#162#176#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scheme/scheme_primitives.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1156,6 +1148,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scheme/scheme_primitives.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding />
         </state>
       </provider>
