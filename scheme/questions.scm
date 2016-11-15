@@ -5,33 +5,50 @@
 
 ; Some utility functions that you may find useful to implement.
 (define (map proc items)
-  'replace-this-line)
-
-(define (cons-all first rests)
-  'replace-this-line)
-
-(define (zip pairs)
-  'replace-this-line)
-
-;; Problem 17
-;; Returns a list of two-element lists
-(define (enumerate s)
-  ; BEGIN PROBLEM 17
-  (m-constructer 0 s)
+  (if (null? items) nil
+    (cons (proc (car items)) (map proc (cdr items)))
+  )
 )
 
-(define (m-constructer index lst)
+(define (cons-all first rests)
+  (map (lambda (x) (cons first x)) rests)
+)
+
+(define (zip pairs)
+  (map list pairs)
+)
+
+;; Problem 17
+(define (m-builder index lst)
   (if (null? lst) '()
-    (cons (list index (car lst)) (m-constructer (+ 1 index) (cdr lst)))
+    (cons (list index (car lst)) (m-builder (+ 1 index) (cdr lst)))
   )
+)
+
+(define (enumerate s)
+  ; BEGIN PROBLEM 17
+  (m-builder 0 s)
 )
   ; END PROBLEM 17
 
 ;; Problem 18
 ;; List all ways to make change for TOTAL with DENOMS
 (define (list-change total denoms)
-  ; BEGIN PROBLEM 18
+  (cond
+    ((null? denoms) '())
+    ((< (- total (car denoms)) 0) (list-change total (cdr denoms)))
+    ((= (- total (car denoms)) 0)
+      (append (cons (cons (car denoms) nil) nil) (list-change total (cdr denoms)))
+    )
 
+    (else
+      (begin
+        (define has (cons-all (car denoms) (list-change (- total (car denoms)) denoms)))
+        (define lacks (list-change total (cdr denoms)))
+        (append has lacks)
+      )
+    )
+  )
 )
   ; END PROBLEM 18
 
@@ -47,23 +64,24 @@
 
 ;; Converts all let special forms in EXPR into equivalent forms using lambda
 (define (let-to-lambda expr)
-  (cond ((atom? expr)
+  (cond
+         ((atom? expr) ; todo this is a primitive type
          ; BEGIN PROBLEM 19
-         'replace-this-line
+         expr
          ; END PROBLEM 19
          )
-        ((quoted? expr)
+         ((quoted? expr)
          ; BEGIN PROBLEM 19
-         'replace-this-line
+         expr
          ; END PROBLEM 19
          )
-        ((or (lambda? expr)
+         ((or (lambda? expr)
              (define? expr))
          (let ((form   (car expr))
                (params (cadr expr))
                (body   (cddr expr)))
            ; BEGIN PROBLEM 19
-           'replace-this-line
+           (append (list form params) body)
            ; END PROBLEM 19
            ))
         ((let? expr)
