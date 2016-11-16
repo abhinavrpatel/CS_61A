@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e051930f-de56-47d9-80c0-c00d8b2d3715" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scheme/.ok_messages" afterPath="$PROJECT_DIR$/scheme/.ok_messages" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hw12/hw12.scm" afterPath="$PROJECT_DIR$/hw12/hw12.scm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scheme/.ok_history" afterPath="$PROJECT_DIR$/scheme/.ok_history" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scheme/questions.scm" afterPath="$PROJECT_DIR$/scheme/questions.scm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scheme/scheme.py" afterPath="$PROJECT_DIR$/scheme/scheme.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scheme/tests/16.py" afterPath="$PROJECT_DIR$/scheme/tests/16.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scheme/tests.scm" afterPath="$PROJECT_DIR$/scheme/tests.scm" />
     </list>
     <ignored path="CS 61A.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,57 +26,18 @@
     <favorites_list name="CS 61A" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.69000727">
-      <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.50793654">
-          <split-first>
-            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file leaf-file-name="scheme.py" pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/scheme/scheme.py">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="30">
-                      <caret line="403" column="0" selection-start-line="403" selection-start-column="0" selection-end-line="403" selection-end-column="0" />
-                      <folding>
-                        <element signature="e#58#89#0" expanded="true" />
-                        <element signature="e#162#176#0" expanded="false" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-first>
-          <split-second>
-            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file leaf-file-name="scheme_primitives.py" pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/scheme/scheme_primitives.py">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="525">
-                      <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-second>
-        </splitter>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="questions.scm" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/scheme/questions.scm">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="lab12.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lab12/lab12.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -167,7 +128,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -203,6 +163,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -358,27 +319,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1472144754646</updated>
-    </task>
-    <task id="LOCAL-00126" summary="initial commit">
-      <created>1476135806926</created>
-      <option name="number" value="00126" />
-      <option name="presentableId" value="LOCAL-00126" />
-      <option name="project" value="LOCAL" />
-      <updated>1476135806926</updated>
-    </task>
-    <task id="LOCAL-00127" summary="up to q3 done">
-      <created>1476137712064</created>
-      <option name="number" value="00127" />
-      <option name="presentableId" value="LOCAL-00127" />
-      <option name="project" value="LOCAL" />
-      <updated>1476137712064</updated>
-    </task>
-    <task id="LOCAL-00128" summary="remove link q4 done">
-      <created>1476224125444</created>
-      <option name="number" value="00128" />
-      <option name="presentableId" value="LOCAL-00128" />
-      <option name="project" value="LOCAL" />
-      <updated>1476224125445</updated>
     </task>
     <task id="LOCAL-00129" summary="completed with EC LOL">
       <created>1476346504039</created>
@@ -702,7 +642,28 @@
       <option name="project" value="LOCAL" />
       <updated>1479196454531</updated>
     </task>
-    <option name="localTasksCounter" value="175" />
+    <task id="LOCAL-00175" summary="q16 added. works up to q19. TODO make sure scheme looks like we did it">
+      <created>1479196861420</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1479196861420</updated>
+    </task>
+    <task id="LOCAL-00176" summary="everything including and up to q19 works. need to do EC, else ready for submission">
+      <created>1479198335489</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1479198335489</updated>
+    </task>
+    <task id="LOCAL-00177" summary="initial commit">
+      <created>1479321271481</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1479321271481</updated>
+    </task>
+    <option name="localTasksCounter" value="178" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -718,7 +679,7 @@
     <frame x="47" y="23" width="1920" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12034079" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12034079" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29377204" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946298" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1268116" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -769,9 +730,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="ordered done" />
-    <MESSAGE value="todo: apply operator to the evaluated arguments" />
-    <MESSAGE value="quiz done" />
     <MESSAGE value="lab10 done" />
     <MESSAGE value="inorder done" />
     <MESSAGE value="hw11 post submit" />
@@ -794,7 +752,10 @@
     <MESSAGE value="SKIPPED QUESTION 16 AT THIS POINT, q17 done" />
     <MESSAGE value="skipped q16, but q17 and q18 work because SID clutches up" />
     <MESSAGE value="skipped q16, all scheme works, this is pre-no copy changes so we dont get rekt" />
-    <option name="LAST_COMMIT_MESSAGE" value="skipped q16, all scheme works, this is pre-no copy changes so we dont get rekt" />
+    <MESSAGE value="q16 added. works up to q19. TODO make sure scheme looks like we did it" />
+    <MESSAGE value="everything including and up to q19 works. need to do EC, else ready for submission" />
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -803,20 +764,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lab03/lab03.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw04/vitamin/vitamin04.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hw04/problems/hw04.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="558">
@@ -1133,21 +1080,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scheme/questions.scm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scheme/scheme.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="403" column="0" selection-start-line="403" selection-start-column="0" selection-end-line="403" selection-end-column="0" />
+        <state relative-caret-position="75">
+          <caret line="406" column="0" selection-start-line="406" selection-start-column="0" selection-end-line="406" selection-end-column="0" />
           <folding>
             <element signature="e#58#89#0" expanded="true" />
-            <element signature="e#162#176#0" expanded="false" />
+            <element signature="e#177#191#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scheme/questions.scm">
+    <entry file="file://$PROJECT_DIR$/lab12/fa16data.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1156,6 +1111,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab12/lab12.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>

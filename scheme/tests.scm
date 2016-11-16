@@ -10,6 +10,166 @@
 ;;; *** Add more of your own here! ***
 ;;; **********************************
 
+
+
+(even? (/ 3 (/ 3 2)))
+; expect True
+
+
+(define x 30)
+; expect x
+
+
+(define y (* 3 x))
+; expect y
+
+y
+; expect 90
+
+
+(define y -1)
+; expect y
+
+y
+; expect -1
+
+(eval (define x (- 100 -1)))
+; expect 101
+
+
+(quote meow)
+; expect meow
+
+(quote (1 . 2))
+; expect (1 . 2)
+
+(quote (1 (2 meme . (4 . 5))))
+; expect (1 (2 meme 4 . 5))
+
+
+(cdr (quote (asd asdf)))
+; expect (asdf)
+
+
+'meow
+; expect meow
+
+'(1 . 2)
+; expect (1 . 2)
+
+'(1 (2 meme . (4 . 5)))
+; expect (1 (2 meme 4 . 5))
+
+
+(cdr '(asd asdf))
+; expect (asdf)
+
+
+(define x (/ 2 0))
+; expect Error: division by zero
+
+
+(begin (+ 1 2) (+ 5 8))
+; expect 13
+
+(define x (begin (quote 3) (newline) (+ 2 3)))
+; expect x
+
+(+ x 3)
+; expect 8
+
+(begin (print 3))
+; expect 3
+
+(lambda (x y) (+ x y x y (* x y (/ x y))))
+; expect (lambda (x y) (+ x y x y (* x y (/ x y))))
+
+(lambda () (3 + x))
+; expect (lambda () (3 + x))
+
+
+((lambda (x) (/ x 0)) 9)
+; expect Error: division by zero
+
+
+(define f (lambda (x) (* x x)))
+; expect f
+
+(f 3)
+; expect 9
+
+(define (cube x) (* x x x))
+; expect cube
+
+(cube 2)
+; expect 8
+
+cube
+; expect (lambda (x) (* x x x))
+
+(print 'memes-consume-my-social-life-please-help)
+; expect memes-consume-my-social-life-please-help
+
+
+(cond ((= 1 2) 'wrong)
+      ((= 0 0) 'correcto)
+      (else 'prob-forgot-a-parenthesis-bro))
+; expect correcto
+
+
+(cond (#f 'UCBerkeleyMemes)
+           (3)
+           (else 'ForEdgyTeens))
+; expect 3
+
+
+
+
+(define my 15)
+; expect my
+
+
+(define life 'memes)
+; expect life
+
+
+(let ((my 42)
+           (life (* my 150)))  ; global my
+       (list my life))
+; expect (42 2250)
+
+(list my life)
+; expect (15 memes)
+
+
+(define y 11)
+; expect y
+
+
+(define mymu (mu (x) (+ x y)))
+; expect mymu
+
+
+(define testmu (lambda (x y) (mymu (+ x x x x))))
+; expect testmu
+
+
+(testmu 3 7)
+; expect 19
+
+
+(load 'questions)
+
+
+(enumerate '(0 1 2 3 4 5 6))
+; expect ((0 0) (1 1) (2 2) (3 3) (4 4) (5 5) (6 6))
+
+
+(let-to-lambda '(let ((memes 'edgy) (for 'teens)) (list memes for)))
+; expect ((lambda (memes for) (list memes for)) (quote edgy) (quote teens))
+
+
+
 ;;; These are examples from several sections of "The Structure
 ;;; and Interpretation of Computer Programs" by Abelson and Sussman.
 
@@ -55,10 +215,16 @@
 ; expect 57
 
 
+(odd? (+
+  (* 4 8) (+ 1 7) (/ 40 5)))
+; expect False
+
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Move the following (exit) line to run additional tests. ;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(exit)
+
 
 
 ;;; 1.1.2
@@ -79,6 +245,20 @@ size
 (define circumference (* 2 pi radius))
 circumference
 ; expect 62.8318
+
+
+(define m-long-number (+ (* 3
+      (+ (* 2 4)
+         (+ 3 5)))
+   (+ (- 10 7)
+      6)))
+
+; expect m-long-number
+
+
+(- (+ m-long-number m-long-number) (* 2 m-long-number))
+; expect 0
+
 
 ;;; 1.1.4
 
@@ -580,7 +760,7 @@ one-through-four
 ;;; Extra credit ;;;
 ;;;;;;;;;;;;;;;;;;;;
 
-(exit)
+
 
 ; Tail call optimization tests
 
@@ -606,3 +786,6 @@ one-through-four
               (sum (- m 1) (+ m total)))))))))
 (sum 1001 0)
 ; expect 501501
+
+
+(exit)

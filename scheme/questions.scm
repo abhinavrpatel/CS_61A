@@ -59,7 +59,6 @@
     ((= (- total (car denoms)) 0)
       (append (cons (cons (car denoms) nil) nil) (list-change total (cdr denoms)))
     )
-
     (else
       (begin
         (define has (cons-all (car denoms) (list-change (- total (car denoms)) denoms)))

@@ -47,11 +47,12 @@ def scheme_apply(procedure, args, env):
 def eval_all(expressions, env):
     """Evaluate a Scheme list of EXPRESSIONS & return the value of the last."""
     # BEGIN PROBLEM 8
-    last = None
-    while expressions is not nil:
-        last = scheme_eval(expressions.first, env)
-        expressions = expressions.second
-    return last
+    if expressions == nil:
+        return
+    elif expressions.second == nil:
+        return scheme_eval(expressions.first, env, True)
+    scheme_eval(expressions.first, env)
+    return eval_all(expressions.second, env)
     # END PROBLEM 8
 
 ################
@@ -245,26 +246,30 @@ def do_lambda_form(expressions, env):
     formals = expressions.first
     check_formals(formals)
     # BEGIN PROBLEM 9
-    return LambdaProcedure(expressions.first, expressions.second, env)
+    return LambdaProcedure(formals, expressions.second, env)
     # END PROBLEM 9
 
 def do_if_form(expressions, env):
     """Evaluate an if form."""
     check_form(expressions, 2, 3)
-    if scheme_truep(scheme_eval(expressions.first, env)):
-        return scheme_eval(expressions.second.first, env)
-    elif len(expressions) == 3:
-        return scheme_eval(expressions.second.second.first, env)
+    if (scheme_eval(expressions.first, env) is False):
+        if expressions.second.second == nil:
+            return nil
+        return scheme_eval(expressions.second.second.first, env, True)
+    else:
+        return scheme_eval(expressions.second.first, env, True)
 
 def do_and_form(expressions, env):
     """Evaluate a short-circuited and form."""
     # BEGIN PROBLEM 13
     val = True # and expression default value
-    while expressions is not nil:
+    while expressions is not nil and expressions.second is not nil:
         val = scheme_eval(expressions.first, env)
         if val is False:
             break
         expressions = expressions.second
+    if expressions is not nil:
+        val = scheme_eval(expressions.first, env, True)
     return val
     # END PROBLEM 13
 
@@ -272,11 +277,14 @@ def do_or_form(expressions, env):
     """Evaluate a short-circuited or form."""
     # BEGIN PROBLEM 13
     val = False # or expression default value
-    while expressions is not nil:
+    while expressions is not nil and expressions.second is not nil:
         val = scheme_eval(expressions.first, env)
         if val is not False:
             break
         expressions = expressions.second
+    if expressions is not nil:
+        val = scheme_eval(expressions.first, env, True)
+
     return val
     # END PROBLEM 13
 
@@ -381,14 +389,6 @@ def check_procedure(procedure):
 
 class MuProcedure(UserDefinedProcedure):
     """A procedure defined by a mu expression, which has dynamic scope.
-     _________________
-    < Scheme is cool! >
-     -----------------
-            \   ^__^
-             \  (oo)\_______
-                (__)\       )\/\
-                    ||----w |
-                    ||     ||
     """
 
     def __init__(self, formals, body):
@@ -485,7 +485,7 @@ def scheme_optimized_eval(expr, env, tail=False):
 
     if tail:
         # BEGIN Extra Credit
-        "*** REPLACE THIS LINE ***"
+        return Thunk(expr, env)
         # END Extra Credit
     else:
         result = Thunk(expr, env)
@@ -500,14 +500,16 @@ def scheme_optimized_eval(expr, env, tail=False):
             result = SPECIAL_FORMS[first](rest, env)
         else:
             # BEGIN Extra Credit
-            "*** REPLACE THIS LINE ***"
-            # END Extra Credit
+            procedure = scheme_eval(first, env)
+            args = rest.map(lambda op: scheme_eval(op, env))
+            result = scheme_apply(procedure, args, env)
+             # END Extra Credit
     return result
 
 ################################################################
 # Uncomment the following line to apply tail call optimization #
 ################################################################
-# scheme_eval = scheme_optimized_eval
+scheme_eval = scheme_optimized_eval
 
 
 ################
