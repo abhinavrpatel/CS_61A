@@ -2,7 +2,7 @@
 .read fa16data.sql
 
 CREATE TABLE obedience AS
-  select "REPLACE THIS LINE WITH YOUR SOLUTION";
+  select seven, denero from students;
 
 CREATE TABLE smallest_int AS
   select "REPLACE THIS LINE WITH YOUR SOLUTION";
